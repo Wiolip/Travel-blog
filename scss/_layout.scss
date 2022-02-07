@@ -39,7 +39,7 @@
 
 .row--3 {
     @extend %row;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 
     @include mq(ml) {
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -86,10 +86,9 @@
 
 .row--2--1 {
     @include mq(ml) {
-        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
         gap: 2rem;
     }
-
     @include mq(m) {
         grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
         gap: 2rem;
