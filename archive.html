@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c09818cd34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body>
+    <nav class="nav navbar">
+
+
+        <ul class="nav__list">
+            <div class="icon cancel-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <li class="nav__listlogo">
+                <img src="img/logotransparent.svg" alt="">
+            </li>
+            <li class="nav__list__item active"><a href="index.html" class="nav__list__link nav__list__link--solid">Home</a></li>
+
+            <li class="nav__list__item has-submenu"><a href="blog.html" class="nav__list__link nav__list__link--solid">Blog</a>
+
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="singlepost.html" class="submenu__links">Single_Post</a>
+                    </li>
+                    <li class="submenu__item"><a href="singlepost.html" class="submenu__links">Single_Post</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__list__item"><a href="about.html" class="nav__list__link nav__list__link--solid">O mnie</a> </li>
+            <li class="nav__list__item"><a href="Wspolpraca.html" class="nav__list__link nav__list__link--solid">Współpraca</a></li>
+            <li class="nav__list__item"><a href="Kontakt.html" class="nav__list__link nav__list__link--solid">Kontakt</a></li>
+            <li class="nav__list__item"><a href="Archive.html" class="nav__list__link nav__list__link--solid">archiwum</a> </li>
+        </ul>
+
+
+        <div class="socials">
+            <a href="https://www.instagram.com/myownphotostory" target="_blank"><i class="fab fa-instagram "></i></a>
+            <a href="https://wiolipcreates.pl" target="_blank"><i class="fab fa-wordpress "></i></a>
+            <a href="" target="_blank" class="social__item"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="icon menu-btn toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+
+
+    <header class="blog__hero" id="header">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <span class="breadcrumbs__item">Home</span>
+                <svg class="separator" width="8" height="8" vievBox='0 0 8 8'>
+                    <polygon points="2.5,0 6.9,4 2.5,8 "></polygon>
+                </svg>
+                <span class="breadcrumbs__item">Blog</span>
+                <svg class="separator" width="8" height="8" vievBox='0 0 8 8'>
+                    <polygon points="2.5,0 6.9,4 2.5,8 "></polygon>
+                </svg>
+                <span class="breadcrumbs__item">Europa</span>
+            </nav>
+            </nav>
+
+            <h1 class="page__title" title="Europa">Europa</h1>
+
+            <div class="blog__meta">
+                <a class="blog__meta__item" href="">All</a>
+                <a class="blog__meta__item" href="">Podróże</a>
+                <a class="blog__meta__item" href="">Footgrafia</a>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="container__blog pt--70 ">
+
+            <main class="main__blog ">
+
+                <div class="row--2--2">
+                    <article class="article">
+                        <div class="image__container">
+                            <img src="img/tatry.jpg" class="article__image" alt="tatry" loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta" [data-type*=circle]>
+                                <li class="post__categories">Polska</li>
+                                <li class="post__categories">Europa</li>
+                                <li class="post__date">17/10/21</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Kopa Kondracka jesienną porą</h3>
+                                <p class="article__excerpt">Kopa Kondracka zaskoczyła mnie po raz kolejny Halny, ciężkie
+                                    chmury i lasery światła dały
+                                    fenomenalny spektakl o poranku</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article">
+
+                        <div class="image__container">
+                            <img src="img/maskonury.jpg" class="article__image" alt="maskonury" loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta" [data-type*=circle]>
+                                <li class="post__categories">Islandia</li>
+                                <li class="post__categories">Europa</li>
+                                <li class="post__date">1/07/20</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Maskonury i czarne plaże Islandii</h3>
+                                <p class="article__excerpt">Maskonury i czarne plaże, to nie jest przypadkowe
+                                    zestawienie.
+                                    Jest takie miejsce w Islandii, które łączy oba te zjawiska</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article">
+
+                        <div class="image__container">
+                            <img src="img/lagodibraies.jpg" class="article__image" alt="maskonury" loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta" [data-type*=circle]>
+                                <li class="post__categories">Włochy</li>
+                                <li class="post__categories">Europa</li>
+                                <li class="post__date">11/10/21</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Lago di Braies – perła Dolomitów</h3>
+                                <p class="article__excerpt">Lago Di Braies to perła Dolomitów. Turkusowa woda, drewniane
+                                    łódki i poszarpane szczyty gór to jego wizytówka</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article">
+
+                        <div class="image__container">
+                            <img src="img/lapszanka.jpg" class="article__image" alt="maskonury" loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta" [data-type*=circle]>
+                                <li class="post__categories">Polskay</li>
+                                <li class="post__categories">Europa</li>
+                                <li class="post__date">17/10/20</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Punkty widokowe na Tatry </h3>
+                                <p class="article__excerpt"> 15 miejsc na Podchalu z pięknym widokiem na Tatry. Po
+                                    górach można chodzic, ale można też podziwiać z daleka</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article">
+                        <div class="image__container">
+                            <img src="img/warszawa.jpg" class="article__image" alt="kompozycja w" loading="lazy">
+                        </div>
+                        <div class="article__items">
+                            <ul class="post__meta" [data-type*=circle]>
+                                <li class="post__categories">Polska</li>
+                                <li class="post__categories">Europa</li>
+                                <li class="post__date">1/05/21</li>
+                            </ul>
+                            <div class="article__content">
+                                <h3 class="article__title">Warszawa na jeden dzień – 6 ulubionych miejsc</h3>
+                                <p class="article__excerpt">Warszawa na 1 dzień- co zobaczyć w stolicy mając tak mało
+                                    czasu? Sprawdź koniecznie</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="pagination pt--100 pb--50">
+                    <a href="" class="prev page--numbers"> &laquo; Poprzedni</a>
+                    <div class="pagination__wrapper">
+                        <a class="page--numbers" href="#">1</a>
+                        <a class="page--numbers active" href="#">2</a>
+                        <a class="page--numbers" href="#">3</a>
+                        <a class="page--numbers" href="#">4</a>
+                        <span class="page--numbers dots">...</span>
+                        <a class="page--numbers" href="#">6</a>
+                    </div>
+                    <a href="" class="next page--numbers">Następny &raquo;</a>
+                </div>
+            </main>
+
+
+
+            <aside>
+                <form action="" class="search__sidebar">
+                    <input type="text" placeholder="Szukaj..." class="search__input">
+                    <button type="submit" class="search__btn"><i class="fas fa-search"></i></button>
+                </form>
+
+
+                <div class="sidebar__CTA">
+                    <img src="img/presetynewsletter.jpeg" class="image" alt="newslettersidebar">
+                    <h3 class="sidebar__CTA__heading">Newsletter</h3>
+                    <p class="sidebar__CTA__content">Zapisz się a jako pierwszy/a otrzymasz informacje o nowych
+                        artykułach, porady podróżnicze,
+                        przydatne tipy. Bonus - 2 pesety Lr mobile za free</p>
+
+                        <form action="" class="sidebar__form">
+                            <input type="text" id="fname" placeholder="Imię" required class="search__input">
+                            <input type="email" id="email" placeholder="Nazwisko" required class="search__input">
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="rodo" required class="checkbox--box">
+                                <span class="checkbox__content--small">Wyrażam zgodę na przesyłanie na mój adres mailowy
+                                    informacji
+                                    o
+                                    nowościach, promocjach,
+                                    produktach oraz akceptuję politykę prywatności</span>
+                            </div>
+                            <input type="submit" value="Zapisz mnie" class="submit__btn">
+                        </form>
+                </div>
+                <div class="image sidebar__banner">
+                    <h3 class="sidebar__CTA__heading">Instagram</h3>
+                    <img src="img/ig.jpg" alt="" class="image sidebar__banner">
+                </div>
+                <div>
+                    <h3 class="sidebar__CTA__heading">Tagi</h3>
+                    <div class="tagclouds">
+                        <a href="" class="tagclouds__item">Aktywnie</a>
+                        <a href="" class="tagclouds__item">Citybreak</a>
+                        <a href="" class="tagclouds__item">Góry</a>
+                        <a href="" class="tagclouds__item">Wschód słońca</a>
+                        <a href="" class="tagclouds__item">Trekking</a>
+                        <a href="" class="tagclouds__item">Hotele</a>
+                        <a href="" class="tagclouds__item">Food</a>
+                        <a href="" class="tagclouds__item">Planowanie podróży</a>
+                        <a href="" class="tagclouds__item">Fotografia</a>
+                        <a href="" class="tagclouds__item">Kultura i sztuka</a>
+                        <a href="" class="tagclouds__item">Eco</a>
+
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ----- footer ------ -->
+
+
+    <footer id="footer" class="footer">
+        <div class="container pt--50">
+
+            <div class="footer__block">
+                <div class="footer__items">
+                    <h4 class="footer__heading">Popularne wpisy</h4>
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    </svg>
+                </div>
+                <div class="footer_arrow" data-page="1">
+                    <span class="arrow arrow__left"></span>
+                    <span class="arrow arrow__right"></span>
+                </div>
+            </div>
+
+            <div class="row--4">
+                <div class="footer__post">
+                    <div class="footer__post__img"><img src="img/footerpost2.jpg" alt="" class="footer__img">
+                    </div>
+                    <div>
+                        <h4 class="footer__post__heading">Zwiedzanie Wenecji – plan na 3 dni</h4>
+                    </div>
+                </div>
+                <div class="footer__post">
+                    <div class="footer__post__img"><img src="img/footerpost1.jpg" alt="" class="footer__img">
+                    </div>
+                    <div>
+                        <h4 class="footer__post__heading">Kanion Antylopy- czy warto?</h4>
+                    </div>
+                </div>
+                <div class="footer__post">
+
+                    <div class="footer__post__img"><img src="/img/footerpost3.jpg" alt="" class="footer__img">
+                    </div>
+                    <div>
+                        <h4 class="footer__post__heading">Maskonury i czarne plaże Islandii </h4>
+                    </div>
+                </div>
+                <div class="footer__post">
+                    <div class="footer__post__img"><img src="/img/footerpost4.jpg" alt="" class="footer__img">
+                    </div>
+                    <div>
+                        <h4 class="footer__post__heading">Kompozycja w fotografii - 10 zasad, które musisz znać
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="footer__copyrigt__text">
+                    <span>Copyright © 2022 MyOwnPhotoStory.pl |</span>
+                    <a href="">Polityka prywatności </a>|
+                    <span>Wdrożenie</span> <a href="">WiolipCreates</a>
+                </div>
+                <div class="socials">
+
+                    <a href="https://www.instagram.com/myownphotostory" target="_blank"><i
+                            class="fab fa-instagram "></i></a>
+                    <a href="https://wiolipcreates.pl" target="_blank"><i class="fab fa-wordpress "></i></a>
+                    <a href="" target="_blank" class="social__item"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- --- buton to top ------ -->
+
+    <div class="scroll__to-top" onclick="topFunction()" id="myBtn" title="Go to top">
+        <button class="scroll--btn">
+            <svg class="scroll--icon" width="15" height="15" viewBox="0 0 20 20">
+                <path d="M10,0L9.4,0.6L0.8,9.1l1.2,1.2l7.1-7.1V20h1.7V3.3l7.1,7.1l1.2-1.2l-8.5-8.5L10,0z">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+
+
+ <!-- /// mobile menu  -->
+
+ <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+    }
+    cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+    }
+    window.onscroll = () => {
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+</script>
+
+
+
+    <!-- ---------- scroll to top ------------- -->
+
+    <script>
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

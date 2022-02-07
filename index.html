@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOwnPhotoStory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c09818cd34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body>
+    <nav class="nav navbar">
+
+
+        <ul class="nav__list">
+            <div class="icon cancel-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <li class="nav__listlogo">
+                <img src="img/logotransparent.svg" alt="">
+            </li>
+            <li class="nav__list__item active"><a href="index.html" class="nav__list__link">Home</a></li>
+
+            <li class="nav__list__item has-submenu"><a href="blog.html" class="nav__list__link">Blog</a>
+
+                <ul class="submenu">
+                    <li class="submenu__item"><a href="singlepost.html" class="submenu__links">Single_Post</a>
+                    </li>
+                    <li class="submenu__item"><a href="singlepost.html" class="submenu__links">Single_Post</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__list__item"><a href="about.html" class="nav__list__link">O mnie</a> </li>
+            <li class="nav__list__item"><a href="Wspolpraca.html" class="nav__list__link">Współpraca</a></li>
+            <li class="nav__list__item"><a href="Kontakt.html" class="nav__list__link">Kontakt</a></li>
+            <li class="nav__list__item"><a href="Archive.html" class="nav__list__link">archiwum</a> </li>
+        </ul>
+
+
+        <div class="socials">
+            <a href="https://www.instagram.com/myownphotostory" target="_blank"><i class="fab fa-instagram "></i></a>
+            <a href="https://wiolipcreates.pl" target="_blank"><i class="fab fa-wordpress "></i></a>
+            <a href="" target="_blank" class="social__item"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="icon menu-btn toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+
+    <!-- --------- header ------ -->
+
+    <header id="header" class="header">
+        <div class="header__hero">
+            <h1 class="header__heading">My Own Photo Story</h1>
+            <img src="/img/logo-travel.svg" class="header__img" alt="logo MyOwnPhotoStory">
+        </div>
+    </header>
+
+    <main>
+        <!-- --------- blog post ------------ -->
+
+        <div class="container pt--50">
+
+            <div class="heading__center">
+                <h2 class="heading__center__title">Najnowsze wpisy</h2>
+                <p class="heading__center__subtitle">
+                    Na blogu co jakiś czas pojawiają się nowe wpisy.
+                    Warto tu zaglądać!
+                </p>
+            </div>
+
+            <div class="row--3 blog__article" >
+                <article class="article">
+
+
+                    <div class="image__container">
+                        <img src="img/Wulkan-Rinjani.jpg" class="article__image" alt="rinjani" loading="lazy">
+                    </div>
+
+
+                    <div class="article__items">
+                        <ul class="post__meta">
+                            <li class="post__categories">Indonezja</li>
+                            <li class="post__categories">Azja</li>
+                            <li class="post__date">17/10/19</li>
+                        </ul>
+
+                        <div class="article__content">
+                            <h3 class="article__title">Wulkan Rinjani – 3 dniowy trekking w Indonezji</h3>
+                            <p class="article__excerpt">Wulkan Rinjani leży na wysokości 3726 m npm i od początku był w
+                                planie mojego wyjazdu do Indonezji </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article">
+
+                    <div class="image__container">
+                        <img src="img/tatry.jpg" class="article__image" alt="tatry" loading="lazy">
+                    </div>
+
+                    <div class="article__items">
+                        <ul class="post__meta">
+                            <li class="post__categories">Polska</li>
+                            <li class="post__categories">Europa</li>
+                            <li class="post__date">17/10/21</li>
+                        </ul>
+
+                        <div class="article__content">
+                            <h3 class="article__title">Kopa Kondracka jesienną porą</h3>
+                            <p class="article__excerpt">Kopa Kondracka zaskoczyła mnie po raz kolejny Halny, ciężkie
+                                chmury i lasery światła dały
+                                fenomenalny spektakl o poranku</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article">
+
+                    <div class="image__container">
+                        <img src="img/maskonury.jpg" class="article__image" alt="maskonury" loading="lazy">
+                    </div>
+
+                    <div class="article__items">
+                        <ul class="post__meta">
+                            <li class="post__categories">Islandia</li>
+                            <li class="post__categories">Europa</li>
+                            <li class="post__date">1/07/20</li>
+                        </ul>
+
+                        <div class="article__content">
+                            <h3 class="article__title">Maskonury i czarne plaże Islandii</h3>
+                            <p class="article__excerpt">Maskonury i czarne plaże, to nie jest przypadkowe zestawienie.
+                                Jest takie miejsce w Islandii, które łączy oba te zjawiska</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article">
+
+                    <div class="image__container">
+                        <img src="img/monument-valley.jpg" class="article__image" alt="maskonury" loading="lazy">
+                    </div>
+
+                    <div class="article__items">
+                        <ul class="post__meta">
+                            <li class="post__categories">USA</li>
+                            <li class="post__categories">America</li>
+                            <li class="post__date">11/07/18</li>
+                        </ul>
+
+                        <div class="article__content">
+                            <h3 class="article__title">Monument Valley</h3>
+                            <p class="article__excerpt">Monument Valley znacie zapewne jako Dziki, Dziki Zachód. Taki
+                                obraz w naszych głowach utrwaliły amerykańskie westerny</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="article">
+
+                    <div class="image__container">
+                        <img src="img/lagodibraies.jpg" class="article__image" alt="maskonury" loading="lazy">
+                    </div>
+
+                    <div class="article__items">
+                        <ul class="post__meta">
+                            <li class="post__categories">Włochy</li>
+                            <li class="post__categories">Europa</li>
+                            <li class="post__date">11/10/21</li>
+                        </ul>
+
+                        <div class="article__content">
+                            <h3 class="article__title">Lago di Braies – perła Dolomitów</h3>
+                            <p class="article__excerpt">Lago Di Braies to perła Dolomitów. Turkusowa woda, drewniane
+                                łódki i poszarpane szczyty gór to jego wizytówka</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article">
+
+                    <div class="image__container">
+                        <img src="img/lapszanka.jpg" class="article__image" alt="maskonury" loading="lazy">
+                    </div>
+
+                    <div class="article__items">
+                        <ul class="post__meta">
+                            <li class="post__categories">Polskay</li>
+                            <li class="post__categories">Europa</li>
+                            <li class="post__date">17/10/20</li>
+                        </ul>
+
+                        <div class="article__content">
+                            <h3 class="article__title">Punkty widokowe na Tatry </h3>
+                            <p class="article__excerpt"> 15 miejsc na Podchalu z pięknym widokiem na Tatry. Po górach
+                                można chodzic, ale można też podziwiać z daleka</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="CTA cta__post">
+                <buttonn class="btn btn--solid">Zobacz wszystkie wpisy</buttonn>
+            </div>
+
+        </div>
+
+        <!-- ----- cards -------- -->
+
+        <div class="cards pt--70 pb--100">
+            <div class="container">
+                <div class="heading__center">
+                    <h2 class="heading__center__title">My Own Photo Story łączy podróże i fotografię</h2>
+                    <p class="heading__center__subtitle">
+                        My Own Photo Story łączy podróże i fotografię
+                    </p>
+                </div>
+                <div class="row--2">
+                    <div class="cards__content">
+                        <div class="imagebox imagebox__left">
+                            <!-- <img src="img/home-myownphotostory1.jpeg" alt="home-myownphotostory-podroze" class="image"> -->
+                        </div>
+                        <div class="cards__layer">
+                            <p class="cards__subtitle"> Relacje z podróży, przewodniki</p>
+                            <h2 class="cards__title">Podróże</h2>
+                        </div>
+                    </div>
+                    <div class="cards__content">
+                        <div class="imagebox imagebox__right">
+                            <!-- <img src="img/home-myownphotostory2.jpeg" alt="home-myownphotostory-podroze" class="image"> -->
+                        </div>
+                        <div class="cards__layer">
+                            <p class="cards__subtitle"> Nauka fotografii, poradniki, obróbka zdjęć</p>
+                            <h2 class="cards__title">Fotografia</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ----- CTA presets -----  -->
+        <div class="wrapper pt--100 pb--100">
+            <div class="container">
+                <div class="row--2">
+                    <div class="wrapper__column column">
+
+                        <div class="heading__left">
+                            <h2 class="heading__left__title">Zobacz moje autorskie presety do LR mobile. Wybierz je
+                                jeśli:
+                            </h2>
+                        </div>
+                        <div>
+                            <ul>
+                                <li class="wrapper__item">robisz zdjęcia zarówno w RAW jak i .jpeg</li>
+                                <li class="wrapper__item">jednym kliknięciem chcesz uzyskać efekt WOW</li>
+                                <li class="wrapper__item">fotografujesz zarówno aparatem jak i telefonem, przy tym
+                                    robisz to
+                                    świadomie, dbając o kompozycję i kadr</li>
+                                <li class="wrapper__item">prowadzisz bloga</li>
+                                <li class="wrapper__item">prowadzisz Instagram i dbasz o spójność siatki i kolor wiodący
+                                    swego feeda</li>
+                                <li class="wrapper__item">prowadzisz biznes oparty na fotografii swych produktów</li>
+                                <li class="wrapper__item">stawiasz na jakość</li>
+                                <li class="wrapper__item">szukasz kompleksowych rozwiązań edycyjnych</li>
+                                <li class="wrapper__item">fascynuje cię obróbka zdjęć</li>
+                            </ul>
+                        </div>
+                        <div class="btn btn--solid">Kup presety</div>
+
+                    </div>
+
+
+                    <div>
+                        <div class="wrapper__image">
+                            <img src="/img/presety.png" alt="presety" class="image image--resize">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ---- newsletter ----- -->
+
+        <div class="container ">
+            <div class="inner__container">
+                <h2 class="inner__container__title">Zapisz się na newsletter</h2>
+
+                <div class="webform">
+                    <form action="">
+                        <div class="webform__item">
+                            <input type="text" placeholder="Imię" id="fname" class=" webform__input">
+                            <input type="Email" placeholder="Email" id="email" required class="webform__input">
+                            <input type="submit" value="Zapisz mnie" class="webform__submit">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="rodo" required class="">
+                            <span class="checkbox__content">Wyrażam zgodę na przesyłanie na mój adres mailowy informacji
+                                o nowościach, promocjach, produktach i usługach wysyłanych przez myownphotostory.pl oraz
+                                akceptuję politykę prywatności strony.
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ------- custom post photography------------- -->
+        <div class="pt--70 pb--50">
+            <div class="container ">
+                <div class="heading__center">
+                    <h2 class="heading__center__title">Wpisy fotograficzne</h2>
+                    <p class="heading__center__subtitle">
+                        Chcesz robić lepsze zdjęcia? Zajrzyj do poradników i zainspiruj się
+                    </p>
+                </div>
+
+                <div class="row--3">
+                    <article class="article">
+                        <div class="image__container">
+                            <img src="img/mops-foto2.jpg" class="article__image" alt="jak robic lepsze zdjecia"
+                                loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta">
+                                <li class="post__categories">Fotografia</li>
+                                <li class="post__categories">Poradniki fotograficzne</li>
+                                <li class="post__date">17/10/19</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Jak robić lepsze zdjęcia – trójkąt ekspozycji</h3>
+                                <p class="article__excerpt">Co to jest ISO, przysłona, czas
+                                    naświetlania, trójkąt ekspozycji, balans bieli? Zapraszam do krótkiego poradnika o
+                                    podstawach fotografii.</p>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="article">
+
+                        <div class="image__container">
+                            <img src="img/mops-foto3.jpg" class="article__image" alt="fotografowanie w podrozy"
+                                loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta">
+                                <li class="post__categories">Fotografia</li>
+                                <li class="post__categories">poradniki fotograficzne</li>
+                                <li class="post__date">17/01/22</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Fotografowanie w podróży, jak robić lepsze zdjęcia?</h3>
+                                <p class="article__excerpt">Przeglądasz instagram i zachwycasz się zdjęciami innych
+                                    osób?
+                                    Twoje kadry wciąż nie są tak dobre jakbyś chciał? Zmieńmy to! Fotografowanie w
+                                    podróży jest
+                                    proste</p>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="article">
+
+                        <div class="image__container">
+                            <img src="img/mops-foto.jpg" class="article__image" alt="kompozycja w" loading="lazy">
+                        </div>
+
+                        <div class="article__items">
+                            <ul class="post__meta">
+                                <li class="post__categories">Fotografia</li>
+                                <li class="post__categories">Poradniki fotograficzne</li>
+                                <li class="post__date">1/07/20</li>
+                            </ul>
+
+                            <div class="article__content">
+                                <h3 class="article__title">Kompozycja w fotografii – 10 zasad, które musisz znać</h3>
+                                <p class="article__excerpt">Kompozycja - trójpodział i wizualny
+                                    porządek
+                                    na zdjęciu, linie wiodące, mocne punkty, symetria, naturalne ramki - wszytko to ma
+                                    wpływ
+                                    na odbiór obrazu i jego atrakcyjnosć</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="cta__button">
+                    <buttonn class="btn btn--solid">Zobacz wszystkie wpisy</buttonn>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ----- prints -----  -->
+        <div class="wrapper wrapper--bg pt--100 pb--70">
+            <div class="container">
+                <div class="row--3 row--2--1">
+                    <div class="column column--2">
+                        <div class="heading__left">
+                            <h2 class="heading__left__title">Profesjonalne wydruki zdjęć
+                            </h2>
+                        </div>
+                        <div>
+                            <p class="wrapper__content">Nie każdy może wyjechać na koniec świata, ale każdy może mieć
+                                mój kawałek świata dla
+                                siebie.
+                                Oferuję autorskie fotografie, drukowane na profesjonalnym, wysokiej jakości papierze
+                                foto.
+                                Nie są to zdjęcia stockowe dostępne hurtowo dla każdego. Zdjęcia powstały podczas moich
+                                podróży, przez pryzmat mojej pasji, wrażliwości, wyobraźni i doświadczenia.
+                                Kupując wydruk dokładasz cegiełkę do moich kolejnych podróży.</p>
+                        </div>
+                        <div class="btn btn--solid">Kup presety</div>
+
+                    </div>
+
+                    <div class="wrapper__image">
+                        <img src="/img/prints1.jpg" alt="presety" class="image">
+                    </div>
+
+
+                    <div class="wrapper__image">
+                        <img src="/img/prints2.jpg" alt="presety" class="image">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ----- footer ------ -->
+
+
+    <footer id="footer" class="footer">
+        <div class="container pt--50">
+
+            <div class="footer__block">
+
+                <div class="footer__items">
+                    <h4 class="footer__heading">Popularne wpisy</h4>
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    </svg>
+                </div>
+                <div class="footer_arrow" data-page="1">
+                    <span class="arrow arrow__left"></span>
+                    <span class="arrow arrow__right"></span>
+                </div>
+            </div>
+
+            <div class="row--4 footer__posts">
+                <div class="footer__post">
+                    <div class="footer__post__img"><img src="img/footerpost2.jpg" alt="" class="footer__img"></div>
+                    <div>
+                        <h4 class="footer__post__heading">Zwiedzanie Wenecji – plan na 3 dni</h4>
+                    </div>
+                </div>
+                <div class="footer__post">
+                    <div class="footer__post__img"><img src="img/footerpost1.jpg" alt="" class="footer__img"></div>
+                    <div>
+                        <h4 class="footer__post__heading">Kanion Antylopy- czy warto?</h4>
+                    </div>
+                </div>
+                <div class="footer__post">
+
+                    <div class="footer__post__img"><img src="/img/footerpost3.jpg" alt="" class="footer__img"></div>
+                    <div>
+                        <h4 class="footer__post__heading">Maskonury i czarne plaże Islandii </h4>
+                    </div>
+                </div>
+                <div class="footer__post">
+                    <div class="footer__post__img"><img src="/img/footerpost4.jpg" alt="" class="footer__img"></div>
+                    <div>
+                        <h4 class="footer__post__heading">Kompozycja w fotografii - 10 zasad, które musisz znać</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="footer__copyrigt__text">
+                    <span>Copyright © 2022 MyOwnPhotoStory.pl |</span>
+                    <a href="">Polityka prywatności </a>|
+                    <span>Wdrożenie</span> <a href="">WiolipCreates</a>
+                </div>
+                <div class="socials">
+
+                    <a href="https://www.instagram.com/myownphotostory" target="_blank"><i
+                            class="fab fa-instagram "></i></a>
+                    <a href="https://wiolipcreates.pl" target="_blank"><i class="fab fa-wordpress "></i></a>
+                    <a href="" target="_blank" class="social__item"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="scroll__to-top" onclick="topFunction()" id="myBtn" title="Go to top">
+        <button class="scroll--btn">
+            <svg class="scroll--icon" width="15" height="15" viewBox="0 0 20 20">
+                <path d="M10,0L9.4,0.6L0.8,9.1l1.2,1.2l7.1-7.1V20h1.7V3.3l7.1,7.1l1.2-1.2l-8.5-8.5L10,0z"></path>
+            </svg>
+        </button>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- /// mobile menu  -->
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+
+
+
+    <script>
+        const toggle = document.querySelector(".toggle");
+        const menu = document.querySelector(".menu");
+
+        /* Toggle mobile menu */
+        function toggleMenu() {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+
+                // adds the menu (hamburger) icon
+                toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
+            } else {
+                menu.classList.add("active");
+
+                // adds the close (x) icon
+                toggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
+            }
+        }
+
+        /* Event Listener */
+        toggle.addEventListener("click", toggleMenu, false);
+
+
+        /* Event Listener */
+        toggle.addEventListener("click", toggleMenu, false);
+
+
+        /* Activate Submenu */
+        const items = document.querySelectorAll(".nav__list__item");
+
+        function toggleItem() {
+            if (this.classList.contains("submenu-active")) {
+                this.classList.remove("submenu-active");
+            } else if (menu.querySelector(".submenu-active")) {
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+                this.classList.add("submenu-active");
+            } else {
+                this.classList.add("submenu-active");
+            }
+        }
+
+        /* Event Listeners */
+        for (let item of items) {
+            if (item.querySelector(".submenu")) {
+                item.addEventListener("click", toggleItem, false);
+
+            }
+        }
+        /* Close Submenu From Anywhere */
+        function closeSubmenu(e) {
+            let isClickInside = menu.contains(e.target);
+
+            if (!isClickInside && menu.querySelector(".submenu-active")) {
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+            }
+        }
+
+        /* Event listener */
+        document.addEventListener("click", closeSubmenu, false);
+    </script>
+
+
+
+    <!-- ---------- scroll to top ------------- -->
+
+    <script>
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+
+</body>
+
+</html>
