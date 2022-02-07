@@ -288,7 +288,7 @@ li {
         line-height: $text-line-height;
 
         &::before {
-            content: url('/img/check.svg');
+            content: url('img/check.svg');
             display: inline-block;
             width: 2rem;
             margin-right: 2rem;
