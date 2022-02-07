@@ -1068,7 +1068,7 @@ input[type=checkbox]:checked::after {
   line-height: 170%;
 }
 .service__item::before {
-  content: url("/img/check.svg");
+  content: url("../img/check.svg");
   display: inline-block;
   width: 1.2rem;
   margin-right: 2rem;
@@ -1349,7 +1349,7 @@ li {
   line-height: 170%;
 }
 .wrapper__item::before {
-  content: url("/img/check.svg");
+  content: url("../img/check.svg");
   display: inline-block;
   width: 2rem;
   margin-right: 2rem;
