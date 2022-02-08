@@ -56,15 +56,14 @@
                 color: $primary;
             }
 
+        }
 
-            &__link--solid {
-                color: $baseheading;
+        &__link--solid {
+            color: $baseheading;
 
-                &:active {
-                    color: $primary;
-                }
+            &:active {
+                color: $primary;
             }
-
         }
 
     }
@@ -157,7 +156,7 @@ nav.sticky {
         color: $baseheading;
     }
 
-    
+
     .has-submenu>.nav__list__link::after {
         content: "\f078";
         color: $baseheading;
