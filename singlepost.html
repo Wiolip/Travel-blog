@@ -56,6 +56,8 @@
 
     </nav>
 
+    <!-- /////////// hero ////////////// -->
+
     <header id="blogpost" class="blogpost">
         <div class="blogpost__hero">
             <h1 class="blogpost__mainheading">Maskonury i czarne plaże Islandii</h1>
@@ -79,6 +81,7 @@
         </div>
     </header>
 
+    <!-- /////////// content ////////////// -->
     <main>
         <div class="container pt--70">
 
@@ -147,7 +150,7 @@
                     jest w całości zamknięty dla turystów</p>
             </div>
 
-            <div class="singlepost-img row--2 row--2--3">
+            <div class="singlepost-img row--2 ">
                 <img src="img/Maskonury1.jpeg" class="image image--fullwidth" loading="lazy" alt="">
                 <img src="img/Maskonury2.jpeg" class="image" loading="lazy" alt="">
                 <img src="img/Maskonury3.jpeg" class="image" loading="lazy" alt="">
@@ -190,7 +193,7 @@
                     na plaży
                     Reynisfjara.</p>
             </div>
-            <div class="singlepost-img row--2 row--2--3">
+            <div class="singlepost-img row--2 ">
                 <img src="img/Maskonury8.jpeg" class="image" loading="lazy" alt="">
                 <img src="img/Maskonury9.jpeg" class="image" loading="lazy" alt="">
                 <img src="img/Maskonury10.jpeg" class="image" loading="lazy" alt="">
@@ -202,22 +205,20 @@
 
         </div>
 
+            <!-- /////////// after content: share icon, nav post, comment ////////////// -->
 
         <div class="container pb--70">
-
             <div class="blog__container">
 
                 <div class="blogpost__tag tagclouds">
-
                     <a href="" class="tagclouds__item">Aktywnie</a>
                     <a href="" class="tagclouds__item">Trekking</a>
                     <a href="" class="tagclouds__item">Fotografia</a>
                     <a href="" class="tagclouds__item">Natura</a>
-
                 </div>
 
 
-                <div class="share__icons">
+                <section class="share__icons">
                     <h4>Czy wiesz, że wysyłając ten artykuł dalej pomagasz mi tworzyć kolejne treści?</h4>
                     <div>
                         <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -226,10 +227,9 @@
                         <a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
 
                     </div>
-                </div>
+                </section>
 
-                <div class="blogpost__navigation  pt--70">
-
+                <section class="blogpost__navigation  pt--70">
 
                     <a href="" class="blogpost__navigation__item-prev">
 
@@ -252,7 +252,6 @@
                         </div>
                     </a>
 
-
                     <a href="" class="blogpost__navigation__item-next">
 
                         <div class="blogpost__navigation__content">
@@ -266,19 +265,36 @@
 
                         </figure>
                     </a>
+                </section>
 
 
+                <!-- /////////// comments form  ////////////// -->
 
+                <section class="blogpost__comments pt--100">
+                    <h3>Podobał ci się wpis? Masz jakieś pytania? Zostaw komentarz</h3>
+                    <form action="" class="blogpost__form">
+                        <div class="blogpost__form__items">
+                            <input type="text" id="fname" placeholder="Imię" required class="search__input">
+                            <input type="email" id="email" placeholder="E-mail" required class="search__input">
+                            <input type="text" id="website" placeholder="Strona www" class="search__input">
+                        </div>
+                        <textarea name="blogcomments" id="blogcomments" placeholder="Dodaj komenarz" ></textarea>
+                        <div class="checkbox">
+                            <input type="checkbox" id="rodo" required class="">
+                            <span class="checkbox__content">Wyrażam zgodę na przesyłanie na mój adres mailowy informacji
+                                o nowościach, promocjach, produktach i usługach wysyłanych przez myownphotostory.pl oraz
+                                akceptuję politykę prywatności strony.
+                            </span>
+                        </div>
+                        <input type="submit" value="Zapisz mnie" class="blogcomemnt__submit">
+                    </form>
 
-
-                </div>
-
+                </section>
             </div>
         </div>
 
 
-
-
+        <!-- /////////// related posts  ////////////// -->
 
         <section class="blogpost__wrapper">
             <div class="container pt--100 pb--70">
@@ -349,17 +365,12 @@
             </div>
         </section>
 
-
-
-        <section class="div blogpost_comments">
-
-        </section>
     </main>
 
 
 
 
-    <!-- ----- footer ------ -->
+    <!-- /////////// footer ////////////// -->
 
 
     <footer id="footer" class="footer">

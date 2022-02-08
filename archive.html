@@ -26,9 +26,11 @@
             <li class="nav__listlogo">
                 <img src="img/logotransparent.svg" alt="">
             </li>
-            <li class="nav__list__item active"><a href="index.html" class="nav__list__link nav__list__link--solid">Home</a></li>
+            <li class="nav__list__item active"><a href="index.html"
+                    class="nav__list__link nav__list__link--solid">Home</a></li>
 
-            <li class="nav__list__item has-submenu"><a href="blog.html" class="nav__list__link nav__list__link--solid">Blog</a>
+            <li class="nav__list__item has-submenu"><a href="blog.html"
+                    class="nav__list__link nav__list__link--solid">Blog</a>
 
                 <ul class="submenu">
                     <li class="submenu__item"><a href="singlepost.html" class="submenu__links">Single_Post</a>
@@ -38,10 +40,14 @@
                 </ul>
             </li>
 
-            <li class="nav__list__item"><a href="about.html" class="nav__list__link nav__list__link--solid">O mnie</a> </li>
-            <li class="nav__list__item"><a href="wspolpraca.html" class="nav__list__link nav__list__link--solid">Współpraca</a></li>
-            <li class="nav__list__item"><a href="kontakt.html" class="nav__list__link nav__list__link--solid">Kontakt</a></li>
-            <li class="nav__list__item"><a href="archive.html" class="nav__list__link nav__list__link--solid">archiwum</a> </li>
+            <li class="nav__list__item"><a href="about.html" class="nav__list__link nav__list__link--solid">O mnie</a>
+            </li>
+            <li class="nav__list__item"><a href="wspolpraca.html"
+                    class="nav__list__link nav__list__link--solid">Współpraca</a></li>
+            <li class="nav__list__item"><a href="kontakt.html"
+                    class="nav__list__link nav__list__link--solid">Kontakt</a></li>
+            <li class="nav__list__item"><a href="archive.html"
+                    class="nav__list__link nav__list__link--solid">archiwum</a> </li>
         </ul>
 
 
@@ -56,6 +62,7 @@
 
     </nav>
 
+    <!-- /////////// hero ////////////// -->
 
     <header class="blog__hero" id="header">
         <div class="container">
@@ -86,48 +93,28 @@
     <div class="container">
         <div class="container__blog pt--70 ">
 
+            <!-- /////////// main posts ////////////// -->
+
             <main class="main__blog ">
 
                 <div class="row--2--2">
                     <article class="article">
+
                         <div class="image__container">
                             <img src="img/tatry.jpg" class="article__image" alt="tatry" loading="lazy">
                         </div>
-
                         <div class="article__items">
-                            <ul class="post__meta" [data-type*=circle]>
-                                <li class="post__categories">Polska</li>
-                                <li class="post__categories">Europa</li>
+                            <ul class="post__meta">
+                                <li class="post__categories"><a href="" class="article__category__link">Polska</a></li>
+                                <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
                                 <li class="post__date">17/10/21</li>
                             </ul>
-
                             <div class="article__content">
-                                <h3 class="article__title">Kopa Kondracka jesienną porą</h3>
+                                <h3 class="article__title"> <a href="" class="article__title__link">Kopa Kondracka
+                                        jesienną porą</a></h3>
                                 <p class="article__excerpt">Kopa Kondracka zaskoczyła mnie po raz kolejny Halny, ciężkie
                                     chmury i lasery światła dały
                                     fenomenalny spektakl o poranku</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article">
-
-                        <div class="image__container">
-                            <img src="img/maskonury.jpg" class="article__image" alt="maskonury" loading="lazy">
-                        </div>
-
-                        <div class="article__items">
-                            <ul class="post__meta" [data-type*=circle]>
-                                <li class="post__categories">Islandia</li>
-                                <li class="post__categories">Europa</li>
-                                <li class="post__date">1/07/20</li>
-                            </ul>
-
-                            <div class="article__content">
-                                <h3 class="article__title">Maskonury i czarne plaże Islandii</h3>
-                                <p class="article__excerpt">Maskonury i czarne plaże, to nie jest przypadkowe
-                                    zestawienie.
-                                    Jest takie miejsce w Islandii, które łączy oba te zjawiska</p>
                             </div>
                         </div>
                     </article>
@@ -139,16 +126,39 @@
                         </div>
 
                         <div class="article__items">
-                            <ul class="post__meta" [data-type*=circle]>
-                                <li class="post__categories">Włochy</li>
-                                <li class="post__categories">Europa</li>
-                                <li class="post__date">11/10/21</li>
+                            <ul class="post__meta">
+                                <li class="post__categories"><a href="" class="article__category__link">Włochy</a></li>
+                                <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
+                                <li class="post__date">17/6/17</li>
                             </ul>
 
                             <div class="article__content">
-                                <h3 class="article__title">Lago di Braies – perła Dolomitów</h3>
+                                <h3 class="article__title"> <a href="" class="article__title__link">Lago di Braies –
+                                        perła Dolomitów</a></h3>
                                 <p class="article__excerpt">Lago Di Braies to perła Dolomitów. Turkusowa woda, drewniane
                                     łódki i poszarpane szczyty gór to jego wizytówka</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article">
+                        <div class="image__container">
+                            <img src="img/maskonury.jpg" class="article__image" alt="maskonury" loading="lazy">
+                        </div>
+                        <div class="article__items">
+                            <ul class="post__meta">
+                                <li class="post__categories"><a href="" class="article__category__link">Islandia</a>
+                                </li>
+                                <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
+                                <li class="post__date">1/7/20</li>
+                            </ul>
+                            <div class="article__content">
+                                <h3 class="article__title"> <a href="" class="article__title__link">Maskonury i czarne
+                                        plaże Islandii</a></h3>
+
+                                <p class="article__excerpt">Maskonury i czarne plaże, to nie jest przypadkowe
+                                    zestawienie.
+                                    Jest takie miejsce w Islandii, które łączy oba te zjawiska</p>
                             </div>
                         </div>
                     </article>
@@ -160,16 +170,18 @@
                         </div>
 
                         <div class="article__items">
-                            <ul class="post__meta" [data-type*=circle]>
-                                <li class="post__categories">Polskay</li>
-                                <li class="post__categories">Europa</li>
-                                <li class="post__date">17/10/20</li>
+                            <ul class="post__meta">
+                                <li class="post__categories"><a href="" class="article__category__link">Polska</a></li>
+                                <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
+                                <li class="post__date">11/10/19</li>
                             </ul>
 
                             <div class="article__content">
-                                <h3 class="article__title">Punkty widokowe na Tatry </h3>
+                                <h3 class="article__title"> <a href="" class="article__title__link">Punkty widokowe na
+                                        Tatry</a></h3>
                                 <p class="article__excerpt"> 15 miejsc na Podchalu z pięknym widokiem na Tatry. Po
-                                    górach można chodzic, ale można też podziwiać z daleka</p>
+                                    górach
+                                    można chodzic, ale można też podziwiać z daleka</p>
                             </div>
                         </div>
                     </article>
@@ -179,13 +191,14 @@
                             <img src="img/warszawa.jpg" class="article__image" alt="kompozycja w" loading="lazy">
                         </div>
                         <div class="article__items">
-                            <ul class="post__meta" [data-type*=circle]>
-                                <li class="post__categories">Polska</li>
-                                <li class="post__categories">Europa</li>
-                                <li class="post__date">1/05/21</li>
+                            <ul class="post__meta">
+                                <li class="post__categories"><a href="" class="article__category__link">Polska</a></li>
+                                <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
+                                <li class="post__date">15/06/19</li>
                             </ul>
                             <div class="article__content">
-                                <h3 class="article__title">Warszawa na jeden dzień – 6 ulubionych miejsc</h3>
+                                <h3 class="article__title"> <a href="" class="article__title__link">Warszawa na jeden
+                                        dzień – 6 ulubionych miejsc</a></h3>
                                 <p class="article__excerpt">Warszawa na 1 dzień- co zobaczyć w stolicy mając tak mało
                                     czasu? Sprawdź koniecznie</p>
                             </div>
@@ -193,22 +206,34 @@
                     </article>
                 </div>
 
-                <div class="pagination pt--100 pb--50">
-                    <a href="" class="prev page--numbers"> &laquo; Poprzedni</a>
+                <!-- /////////// pagination ////////////// -->
+
+
+
+
+                <div class="pagination pt--100">
+
+                    <a href="" class="btn prev pagination--page"> &laquo; Poprzedni</a>
                     <div class="pagination__wrapper">
-                        <a class="page--numbers" href="#">1</a>
-                        <a class="page--numbers active" href="#">2</a>
-                        <a class="page--numbers" href="#">3</a>
-                        <a class="page--numbers" href="#">4</a>
-                        <span class="page--numbers dots">...</span>
-                        <a class="page--numbers" href="#">6</a>
+                        <a class=" first pagination--numb pagination--page active" href="#">1</a>
+                        <a class="pagination--numb pagination--page" href="#">2</a>
+                        <a class="pagination--numb pagination--page" href="#">3</a>
+                        <a class="pagination--numb pagination--page" href="#">4</a>
+                        <a class="pagination--dots pagination--page">...</a>
+                        <a class="last pagination--numb pagination--page" href="#">6</a>
                     </div>
-                    <a href="" class="next page--numbers">Następny &raquo;</a>
+                    <a href="" class=" btn next pagination--page">Następny &raquo;</a>
                 </div>
+
+
+
+
             </main>
 
 
 
+
+            <!-- /////////// aside - sidebar ////////////// -->
             <aside>
                 <form action="" class="search__sidebar">
                     <input type="text" placeholder="Szukaj..." class="search__input">
@@ -223,26 +248,43 @@
                         artykułach, porady podróżnicze,
                         przydatne tipy. Bonus - 2 pesety Lr mobile za free</p>
 
-                        <form action="" class="sidebar__form">
-                            <input type="text" id="fname" placeholder="Imię" required class="search__input">
-                            <input type="email" id="email" placeholder="Nazwisko" required class="search__input">
+                    <form action="" class="sidebar__form">
+                        <input type="text" id="fname" placeholder="Imię" required class="search__input">
+                        <input type="email" id="email" placeholder="Nazwisko" required class="search__input">
 
-                            <div class="checkbox">
-                                <input type="checkbox" id="rodo" required class="checkbox--box">
-                                <span class="checkbox__content--small">Wyrażam zgodę na przesyłanie na mój adres mailowy
-                                    informacji
-                                    o
-                                    nowościach, promocjach,
-                                    produktach oraz akceptuję politykę prywatności</span>
-                            </div>
-                            <input type="submit" value="Zapisz mnie" class="submit__btn">
-                        </form>
+                        <div class="checkbox">
+                            <input type="checkbox" id="rodo" required class="checkbox--box">
+                            <span class="checkbox__content--small">Wyrażam zgodę na przesyłanie na mój adres mailowy
+                                informacji
+                                o
+                                nowościach, promocjach,
+                                produktach oraz akceptuję politykę prywatności</span>
+                        </div>
+                        <input type="submit" value="Zapisz mnie" class="submit__btn">
+                    </form>
                 </div>
-                <div class="image sidebar__banner">
+                <div class="socialswrapper">
                     <h3 class="sidebar__CTA__heading">Instagram</h3>
-                    <img src="img/ig.jpg" alt="" class="image sidebar__banner">
+                    <div class="socials__heding">
+                        <a href="https://www.instagram.com/myownphotostory" target="_blank"><i
+                                class="fab fa-instagram "></i></a>
+                        <h4 class="socialswrapper__title">Myownphotostory</h4>
+                    </div>
+                    <div class="socialswrapper__img">
+                        <img src="img/ig1.jpg" alt="" class="image">
+                        <img src="img/ig2.jpg" alt="" class="image">
+                        <img src="img/ig3.jpg" alt="" class="image">
+                        <img src="img/ig4.jpg" alt="" class="image">
+                        <img src="img/ig5.jpg" alt="" class="image">
+                        <img src="img/ig6.jpg" alt="" class="image">
+                        <img src="img/ig7.jpg" alt="" class="image">
+                        <img src="img/ig8.jpg" alt="" class="image">
+                        <img src="img/ig9.jpg" alt="" class="image">
+                    </div>
+                    <a href="https://www.instagram.com/myownphotostory"><button class="btn btn--solid">Follow on
+                            instagram</button></a>
                 </div>
-                <div>
+                <div class="sidebar__tagclouds">
                     <h3 class="sidebar__CTA__heading">Tagi</h3>
                     <div class="tagclouds">
                         <a href="" class="tagclouds__item">Aktywnie</a>
@@ -268,8 +310,7 @@
 
 
 
-
-    <!-- ----- footer ------ -->
+    <!-- /////////// footer ////////////// -->
 
 
     <footer id="footer" class="footer">
@@ -356,27 +397,27 @@
 
 
 
- <!-- /// mobile menu  -->
+    <!-- /// mobile menu  -->
 
- <script>
-    const body = document.querySelector("body");
-    const navbar = document.querySelector(".navbar");
-    const menuBtn = document.querySelector(".menu-btn");
-    const cancelBtn = document.querySelector(".cancel-btn");
-    menuBtn.onclick = () => {
-        navbar.classList.add("show");
-        menuBtn.classList.add("hide");
-        body.classList.add("disabled");
-    }
-    cancelBtn.onclick = () => {
-        body.classList.remove("disabled");
-        navbar.classList.remove("show");
-        menuBtn.classList.remove("hide");
-    }
-    window.onscroll = () => {
-        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-    }
-</script>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
 
 
 

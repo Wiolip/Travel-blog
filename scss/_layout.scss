@@ -37,6 +37,8 @@
     @extend %row;
 }
 
+
+//blogpost, prints, imageabout
 .row--3 {
     @extend %row;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
@@ -44,13 +46,13 @@
     @include mq(ml) {
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     }
-
-
     @include mq(s) {
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     }
 }
 
+
+//related posts
 .row--3--1 {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     @include mq(ml) {
@@ -58,13 +60,12 @@
     }
 }
 
-.row--3--2 {
 
+//services
+.row--3--2 {
     @include mq(m) {
         grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
-
     }
-
     @include mq(s) {
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     }
@@ -72,6 +73,8 @@
 }
 
 
+
+//cards, heropage
 
 .row--2 {
     @extend %row;
@@ -83,6 +86,8 @@
     }
 }
 
+
+//prints
 
 .row--2--1 {
     @include mq(ml) {
@@ -96,7 +101,7 @@
 
 }
 
-
+// archive main post
 .row--2--2 {
     margin: 0 auto;
     display: grid;
@@ -104,6 +109,8 @@
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
 
 }
+
+//footer post
 
 .row--4 {
     @extend %row;
@@ -115,8 +122,7 @@
     }
 }
 
-
-
+///imge gallery services
 
 .row--4--2 {
     @extend %row;
@@ -128,12 +134,12 @@
     }
 }
 
+
+
+//services gallery
 .row--7 {
+    @extend %row;
     max-width: 100rem;
-    margin: 0 auto;
-    display: grid;
-    gap: 3rem;
-    position: relative;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 1rem;
 
@@ -236,8 +242,6 @@ h4 {
             width: 10rem;
             position: absolute;
             top: -2rem;
-
-
 
         }
     }
@@ -355,3 +359,4 @@ h4 {
     background-size: cover;
 
 }
+
