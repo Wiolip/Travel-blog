@@ -136,7 +136,7 @@
 
 .blog__meta {
     display: flex;
-    padding-top: 30px;
+    padding-top: 3rem;
 
 
     &__item {
@@ -195,7 +195,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: clamp(50px, 15vw, 150px);
+        font-size: clamp(5rem, 15vw, 15rem);
         font-weight: 800;
         line-height: 1;
         color: $bgcolor;
@@ -241,12 +241,12 @@
         margin: 0 .5rem;
         padding: .75rem 1.3rem;
         color: $baseheading;
-        border: 2px solid transparent;
+        border: .2rem solid transparent;
         transition: all .5s ease-in-out;
         cursor: pointer;
 
         &:hover:not(.pagination--dots, .active) {
-            border: 2px solid $secondary;
+            border: .2rem solid $secondary;
             border-radius: .4rem;
             color: $secondary;
         }
@@ -277,14 +277,6 @@
     }
 
 }
-
-
-
-
-
-
-
-
 
 
 /////////// archive //////////////
@@ -330,7 +322,7 @@ aside {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid $basetext;
+        border-bottom: .1rem solid $basetext;
 
     }
 
@@ -386,7 +378,7 @@ aside {
         padding: 1rem 1.3rem;
         margin: .4rem 0;
         border: .1rem solid $secondary;
-        border-radius: 4px;
+        border-radius: .4rem;
         outline: none;
     }
 
@@ -396,7 +388,7 @@ aside {
         border-style: none;
         background-color: $primary;
         color: $linkcolor;
-        border-radius: 5px;
+        border-radius: .5rem;
         text-align: center;
         font-size: 1.4rem;
         text-transform: uppercase;
@@ -522,16 +514,13 @@ input[type=checkbox] {
     width: 100%;
     height: 80rem;
     background-image: $gradient, url(../img/Maskonury1.jpeg);
-    background-position: center;
-    background-size: cover;
+    @extend .bg-image;
     position: relative;
     padding: 0 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 
     &__hero {
         max-width: 75rem;
@@ -619,9 +608,6 @@ input[type=checkbox] {
 }
 
 
-
-
-
 .blogpost__navigation {
     display: flex;
     justify-content: space-between;
@@ -635,13 +621,10 @@ input[type=checkbox] {
         flex-basis: 49%;
     }
 
-
     &__item-next {
         justify-content: flex-end;
         text-align: right;
     }
-
-
 
     &__content {
         display: flex;
@@ -686,8 +669,6 @@ input[type=checkbox] {
     align-items: center;
     justify-content: center;
 
-
-
 }
 
 .navigation__img {
@@ -711,8 +692,6 @@ input[type=checkbox] {
 
         @include mq(s) {
             flex-direction: column;
-
-
         }
     }
 
@@ -731,7 +710,7 @@ input[type=checkbox] {
         margin-top: 1rem;
         outline: none;
         resize: none;
-        border: .1rem solid $formbordercolor;
+        border: .1rem solid $bordercolor;
         font-size: 1.6rem;
         outline: none;
         flex-basis: 90%;
@@ -739,12 +718,12 @@ input[type=checkbox] {
     }
 
     ::placeholder {
-        color: lighten( $basetext, 50%);
+        color: lighten($basetext, 50%);
     }
 
     input[type=text],
     input[type=email] {
-        border: .1rem solid $formbordercolor;
+        border: .1rem solid $bordercolor;
     }
 
 

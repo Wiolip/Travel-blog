@@ -41,6 +41,8 @@ li {
     list-style: none;
 }
 
+@include selection($linkcolor, $primary);
+
 
 
 
@@ -49,8 +51,7 @@ li {
 
 .header {
     background-image: $gradient, url(../img/herobaner.jpg);
-    background-position: center;
-    background-size: cover;
+    @extend .bg-image;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -71,7 +72,6 @@ li {
         }
     }
 
-
     &__img {
         margin-top: 3rem;
         width: 10rem;
@@ -82,7 +82,7 @@ li {
 
 
 .cta__post {
-    @extend %cta;
+    @extend .cta;
     padding: 10rem 0;
     background-image: url(../img/logotravel.png);
     background-position: center;
@@ -99,7 +99,7 @@ li {
 
 
 .cta__button {
-    @extend %cta;
+    @extend .cta;
 }
 
 
@@ -133,8 +133,8 @@ li {
         &:hover {
             background-color: $primary;
             bottom: 0;
-            left: -20px;
-            right: 20px;
+            left: -2rem;
+            right: 2rem;
         }
     }
 
@@ -155,31 +155,27 @@ li {
 }
 
 .imagebox {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   @extend .bg-image;
     min-height: 55rem;
     border-radius: 1.2rem;
 
     &__left {
         background-image: url(../img/home-myownphotostory1.jpeg);
+        @extend .bg-image;
     }
 
     &__right {
         background-image: url(../img/home-myownphotostory2.jpeg);
+        @extend .bg-image;
     }
 
-
-
 }
-
 
 
 /////////// presets wraper //////////////
 
 .wrapper {
     &__item {
-        list-style: none;
         line-height: $text-line-height;
 
         &::before {
@@ -192,8 +188,6 @@ li {
 
     &--bg {
         background-color: $baseheading;
-
-
         .heading__left__title {
             color: $linkcolor;
         }
@@ -206,9 +200,8 @@ li {
 
 
 .image {
-
     min-height: 50rem;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     transition: .5s ease-in-out;
 
     &:hover {
@@ -224,7 +217,6 @@ li {
 
 
 .column {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,8 +235,7 @@ li {
 
 .inner__container {
     background-image: $gradient, url(../img/newsletter.jpg);
-    background-position: center;
-    background-size: cover;
+    @extend .bg-image;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -281,7 +272,7 @@ li {
         display: flex;
         gap: 1rem;
         width: 100%;
-        border-radius: 4px;
+        border-radius: .4rem;
         margin-bottom: 2rem;
 
         @include mq(s) {
@@ -302,7 +293,7 @@ li {
         padding: 1rem 1.3rem;
         border-radius: 0.4rem;
         border-style: none;
-        border: 1px solid $primary;
+        border: .1rem solid $primary;
         outline: none;
 
         @include mq(s) {
@@ -356,7 +347,7 @@ li {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        max-width: 1280px;
+        max-width: 128rem;
         margin-bottom: 2rem;
 
     }
@@ -389,8 +380,8 @@ li {
     }
 
     &__img {
-        width: 50px;
-        height: 50px;
+        width: 5rem;
+        height: 5rem;
         border-radius: 50%;
     }
 
@@ -447,7 +438,7 @@ li {
     cursor: pointer;
     border-radius: .3rem;
     opacity: .5;
-    border: 2px solid $bgcard;
+    border: .2rem solid $bgcard;
     font-weight: 400;
     transition: all .3s ease-in;
 
@@ -461,9 +452,9 @@ li {
 
     &::before {
         content: '';
-        width: 5px;
-        height: 5px;
-        border: 2px solid $bgcard;
+        width: .5rem;
+        height: .5rem;
+        border: .2rem solid $bgcard;
         border-right: none;
         border-bottom: none;
 
