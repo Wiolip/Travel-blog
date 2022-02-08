@@ -1143,7 +1143,7 @@ input[type=checkbox]:checked::after {
   opacity: 0.7;
 }
 .blogpost__form ::placeholder {
-  color: #27292f;
+  color: #939393;
 }
 .blogpost__form input[type=text],
 .blogpost__form input[type=email] {

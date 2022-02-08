@@ -739,14 +739,13 @@ input[type=checkbox] {
     }
 
     ::placeholder {
-        color: $baseheading;
+        color: lighten( $basetext, 50%);
     }
 
     input[type=text],
     input[type=email] {
         border: .1rem solid $formbordercolor;
     }
-
 
 
 }
