@@ -411,8 +411,9 @@ li {
     &__copyrigt__text {
         color: $iconopacity;
 
-        @include mq(s) {
+        @include mq(m) {
             text-align: center;
+            order: 2;
         }
     }
 

@@ -4,6 +4,7 @@
     width: 100%;
     height: 7rem;
     padding: 2rem 5rem;
+    background-color: $bgcolor;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -12,6 +13,7 @@
 
     &__list {
         display: flex;
+        flex: 2;
         justify-content: flex-start;
         align-items: center;
         gap: 0 2rem;
@@ -43,13 +45,12 @@
             }
 
             &:hover .submenu {
-                opacity: 1;
-                visibility: visible;
+                display: block;
             }
         }
 
         &__link {
-            color: $linkcolor;
+            color: $baseheading;
             text-transform: uppercase;
 
             &:hover {
@@ -66,6 +67,8 @@
             }
         }
 
+
+
     }
 
     .fas,
@@ -81,41 +84,50 @@
 }
 
 
-.has-submenu>.nav__list__link::after {
+.has-submenu>.nav__list__link::after,
+.has-submenu>.submenu__links::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     font-weight: 900;
-    color: $linkcolor;
-    padding-left: 5px;
+    color: $baseheading;
+    padding-left: 1rem;
 
 }
 
-.submenu {
+.submenu,
+.submenu--2 {
     position: absolute;
     top: 5.5rem;
     left: -1rem;
     background-color: $linkcolor;
     width: 20rem;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    opacity: 0;
-    visibility: hidden;
     transition: opacity 200ms ease-in-out;
+    display: none;
+
 
     &__item {
+        display: block;
         padding: .5rem;
+        position: relative;
 
+        &:hover .submenu--2 {
+            display: block;
+        }
     }
+
+
 
     &__links {
         display: block;
         padding: .5rem 0;
         color: $baseheading;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         text-transform: uppercase;
 
         &:hover {
@@ -123,8 +135,19 @@
         }
 
     }
+
 }
 
+.submenu--2 {
+    position: absolute;
+    top: 1rem;
+    left: 19rem;
+
+    &__item {
+        padding: .5rem;
+    }
+
+}
 
 
 
@@ -157,7 +180,8 @@ nav.sticky {
     }
 
 
-    .has-submenu>.nav__list__link::after {
+    .has-submenu>.nav__list__link::after,
+    .has-submenu>.submenu__links::after {
         content: "\f078";
         color: $baseheading;
 
@@ -175,11 +199,10 @@ nav.sticky {
 
     .fab {
         font-size: 1.6rem;
-        color: $bgcolor;
-        background-color: $iconopacity;
+        color: $primary;
         padding: 1rem;
         border-radius: 50%;
-        border: .1rem solid transparent;
+        border: .1rem solid $primary;
         cursor: pointer;
         margin-left: 1rem;
         transition: all .5s ease-in-out;
@@ -187,6 +210,7 @@ nav.sticky {
         &:hover {
             background-color: $primary;
             border: .1rem solid $primary;
+            color: $bgcolor;
 
         }
     }
@@ -214,6 +238,17 @@ nav.sticky {
             background-color: $primary;
             border: 0;
         }
+    }
+
+    &--footer .fab {
+        color: $bgcolor;
+        background-color: $iconopacity;
+        border: none;
+
+        &:hover {
+            border: none;
+        }
+
     }
 
 }
@@ -266,17 +301,22 @@ nav.sticky {
                 }
             }
 
+            &logo {
+                width: 3rem;
+                height: 3rem;
+            }
+
         }
 
         .fas {
             display: block;
-            margin: 1rem;
+            margin: .5rem;
             font-size: 2rem;
             position: absolute;
             top: .5rem;
             right: 1rem;
             color: $primary;
-            background-color: $iconopacity;
+            background-color: $linkcolor;
             border: .1rem solid $primary;
             border-radius: .4rem;
             padding: .5rem;
@@ -289,13 +329,36 @@ nav.sticky {
         }
     }
 
-    .socials {
-        display: none;
+    .has-submenu>.nav__list__link::after,
+    .has-submenu>.submenu__links::after {
+        content: "\f078";
+        color: $secondary;
     }
 
+
+    .socials {
+        display: none;
+
+        &--footer {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 3rem;
+
+
+        }
+    }
+
+.footer__copyrigt__text{
+    order:2;
+}
+
     nav.sticky {
-        background-color: transparent;
-        border: none;
+
+        .nav__listlogo {
+            width: 3rem;
+            height: 3rem;
+        }
 
         .nav__list__link {
             color: $linkcolor;
@@ -303,23 +366,43 @@ nav.sticky {
             &:hover {
                 color: $secondary;
             }
+
+
         }
 
         li a {
             color: $linkcolor2;
         }
 
-        .has-submenu>.nav__list__link::after {
+        .has-submenu>.nav__list__link::after,
+        .has-submenu>.submenu__links::after {
             content: "\f078";
-            color: $linkcolor;
+            color: $secondary;
         }
     }
 
     .submenu {
-        display: none;
+        // display: none;
         position: relative;
+        top: 2rem;
+        margin-bottom: 1rem;
+        max-width: 15rem;
 
     }
+
+    .submenu--2 {
+        position: absolute;
+        top: 1rem;
+        left: 14rem;
+        max-width: 15rem;
+
+        &__item {
+            padding: .5rem;
+        }
+
+    }
+
+
 
     // .submenu-active .submenu {
     //     display: block;
@@ -329,10 +412,7 @@ nav.sticky {
 
 @media screen and (max-width: 570px) {
     .nav {
-
-
         &__list {
-
             width: 100%;
         }
     }
