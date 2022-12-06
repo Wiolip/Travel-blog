@@ -11,61 +11,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c09818cd34.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 
 </head>
 
 <body>
-    <nav class="nav navbar">
-        <div class="nav__listlogo">
-            <img src="img/logo-mops1.svg" alt="" class="image">
-        </div>
-
-        <ul class="nav__list">
-
-            <div class="icon cancel-btn">
-                <i class="fas fa-times"></i>
+    <nav class="nav" id="Nav">
+        <div class="container nav-container navbar">
+            <div class="nav__logo">
+                <img src="img/logo-mops1.svg" alt="" class="image">
             </div>
 
-            <li class="nav__list__item "><a href="index.html" class="nav__list__link active">Home</a></li>
+            <ul class="nav__items menu " id="navbar">
 
-            <li class="nav__list__item has-submenu"><a href="blog.html" class="nav__list__link">Blog</a>
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
 
-                <ul class="submenu">
-                    <li class="submenu__item"><a href="archive.html" class="submenu__links">Ameryka</a> </li>
-                    <li class="submenu__item"><a href="archive.html" class="submenu__links">Azja</a> </li>
-                    <li class="submenu__item has-submenu"><a href="archive.html" class="submenu__links">Europa</a>
+                <li class="nav__item "><a href="index.html" class="nav__link nav__link--active">Home</a></li>
 
-                        <ul class="submenu--2">
-                            <li class="submenu--2__item"><a href="singlepost.html" class="submenu__links">Polska</a>
-                            </li>
-                            <li class="submenu--2__item"><a href="singlepost.html" class="submenu__links">Islandia</a>
-                            </li>
-                            <li class="submenu--2__item"><a href="singlepost.html" class="submenu__links">Włochy</a>
-                            </li>
+                <li class="nav__item menu__dropdown "><a href="blog.html" class="nav__link">Blog</a>
 
-                        </ul>
+                    <ul class="dropdown">
+                        <li class="dropdown__item"><a href="archive.html" class="dropdown__link">Ameryka</a> </li>
+                        <li class="dropdown__item"><a href="archive.html" class="dropdown__link">Azja</a> </li>
+                        <li class="dropdown__item menu__dropdown--children">
+                            <a href="archive.html" class="dropdown__link">Europa</a>
 
-                    </li>
-                </ul>
-            </li>
+                            <ul class="submenu-level submenu">
+                                <li class="submenu__item">
+                                    <a href="singlepost.html" class="submenu__link">Polska</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="singlepost.html" class="submenu__link">Islandia</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="singlepost.html" class="submenu__link">Włochy</a>
+                                </li>
 
-            <li class="nav__list__item"><a href="about.html" class="nav__list__link">O mnie</a> </li>
-            <li class="nav__list__item"><a href="wspolpraca.html" class="nav__list__link">Współpraca</a></li>
-            <li class="nav__list__item"><a href="kontakt.html" class="nav__list__link">Kontakt</a></li>
+                            </ul>
 
-        </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav__item"><a href="about.html" class="nav__link">O mnie</a> </li>
+                <li class="nav__item"><a href="wspolpraca.html" class="nav__link">Współpraca</a></li>
+                <li class="nav__item"><a href="kontakt.html" class="nav__link">Kontakt</a></li>
+
+            </ul>
 
 
-        <div class="socials">
-            <a href="https://www.instagram.com/myownphotostory" target="_blank"><i class="fab fa-instagram "></i></a>
-            <a href="https://wiolipcreates.pl" target="_blank"><i class="fab fa-wordpress "></i></a>
-            <a href="" target="_blank" class="social__item"><i class="fab fa-facebook"></i></a>
+            <div class="socials">
+                <a href="https://www.instagram.com/myownphotostory" target="_blank"><i
+                        class="fab fa-instagram "></i></a>
+                <a href="https://wiolipcreates.pl" target="_blank"><i class="fab fa-wordpress "></i></a>
+                <a href="" target="_blank" class="social__item"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="icon menu-btn toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="icon menu-btn toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-
     </nav>
 
     <!-- /////////// header ////////////// -->
@@ -78,14 +84,13 @@
     </header>
 
     <main>
-
         <!-- /////////// blog post  ////////////// -->
 
         <div class="container pt--50">
 
-            <div class="heading__center">
-                <h2 class="heading__center__title">Najnowsze wpisy</h2>
-                <p class="heading__center__subtitle">
+            <div class="heading ">
+                <h2 class="heading__title">Najnowsze wpisy</h2>
+                <p class="heading__subtitle">
                     Na blogu co jakiś czas pojawiają się nowe wpisy.
                     Warto tu zaglądać!
                 </p>
@@ -99,13 +104,14 @@
                     </div>
 
                     <div class="article__items">
-                        <ul class="post__meta">
-                            <li class="post__categories"><a href="" class="article__category__link">Indonezja</a></li>
-                            <li class="post__categories"><a href="" class="article__category__link">Azja</a></li>
-                            <li class="post__date">17/10/19</li>
+                        <ul class="article__meta  meta">
+                            <li class="meta__categories"><a href="" class="meta__link">Indonezja</a></li>
+                            <li class="meta__categories"><a href="" class="meta__link">Azja</a></li>
+                            <li class="meta__date">17/10/19</li>
                         </ul>
+
                         <div class="article__content">
-                            <h3 class="article__title"> <a href="" class="article__title__link">Wulkan Rinjani – 3
+                            <h3 class="article__title"> <a href="" class="article__link">Wulkan Rinjani – 3
                                     dniowy trekking w Indonezji</a></h3>
                             <p class="article__excerpt">Wulkan Rinjani leży na wysokości 3726 m npm i od początku był w
                                 planie mojego wyjazdu do Indonezji </p>
@@ -119,13 +125,13 @@
                         <img src="img/tatry.jpg" class="article__image" alt="tatry" loading="lazy">
                     </div>
                     <div class="article__items">
-                        <ul class="post__meta">
-                            <li class="post__categories"><a href="" class="article__category__link">Polska</a></li>
-                            <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
-                            <li class="post__date">17/10/21</li>
+                        <ul class="article__meta  meta">
+                            <li class="meta__categories"><a href="" class="meta__link">Polska</a></li>
+                            <li class="meta__categories"><a href="" class="meta__link">Europa</a></li>
+                            <li class="meta__date">17/10/21</li>
                         </ul>
                         <div class="article__content">
-                            <h3 class="article__title"> <a href="" class="article__title__link">Kopa Kondracka jesienną
+                            <h3 class="article__title"> <a href="" class="article__link">Kopa Kondracka jesienną
                                     porą</a></h3>
                             <p class="article__excerpt">Kopa Kondracka zaskoczyła mnie po raz kolejny Halny, ciężkie
                                 chmury i lasery światła dały
@@ -140,13 +146,13 @@
                         <img src="img/maskonury.jpg" class="article__image" alt="maskonury" loading="lazy">
                     </div>
                     <div class="article__items">
-                        <ul class="post__meta">
-                            <li class="post__categories"><a href="" class="article__category__link">Islandia</a></li>
-                            <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
-                            <li class="post__date">1/7/20</li>
+                        <ul class="article__meta  meta">
+                            <li class="meta__categories"><a href="" class="meta__link">Islandia</a></li>
+                            <li class="meta__categories"><a href="" class="meta__link">Europa</a></li>
+                            <li class="meta__date">1/7/20</li>
                         </ul>
                         <div class="article__content">
-                            <h3 class="article__title"> <a href="" class="article__title__link">Maskonury i czarne plaże
+                            <h3 class="article__title"> <a href="" class="article__link">Maskonury i czarne plaże
                                     Islandii</a></h3>
 
                             <p class="article__excerpt">Maskonury i czarne plaże, to nie jest przypadkowe zestawienie.
@@ -161,14 +167,14 @@
                         <img src="img/monument-valley.jpg" class="article__image" alt="maskonury" loading="lazy">
                     </div>
                     <div class="article__items">
-                        <ul class="post__meta">
-                            <li class="post__categories"><a href="" class="article__category__link">USA</a></li>
-                            <li class="post__categories"><a href="" class="article__category__link">Ameryka PN</a></li>
-                            <li class="post__date">1/7/18</li>
+                        <ul class="article__meta  meta">
+                            <li class="meta__categories"><a href="" class="meta__link">USA</a></li>
+                            <li class="meta__categories"><a href="" class="meta__link">Ameryka PN</a></li>
+                            <li class="meta__date">1/7/18</li>
                         </ul>
 
                         <div class="article__content">
-                            <h3 class="article__title"> <a href="" class="article__title__link">Monument Valley</a></h3>
+                            <h3 class="article__title"> <a href="" class="article__link">Monument Valley</a></h3>
                             <p class="article__excerpt">Monument Valley znacie zapewne jako Dziki, Dziki Zachód. Taki
                                 obraz w naszych głowach utrwaliły amerykańskie westerny</p>
                         </div>
@@ -181,14 +187,14 @@
                     </div>
 
                     <div class="article__items">
-                        <ul class="post__meta">
-                            <li class="post__categories"><a href="" class="article__category__link">Włochy</a></li>
-                            <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
-                            <li class="post__date">17/6/17</li>
+                        <ul class="article__meta  meta">
+                            <li class="meta__categories"><a href="" class="meta__link">Włochy</a></li>
+                            <li class="meta__categories"><a href="" class="meta__link">Europa</a></li>
+                            <li class="meta__date">17/6/17</li>
                         </ul>
 
                         <div class="article__content">
-                            <h3 class="article__title"> <a href="" class="article__title__link">Lago di Braies – perła
+                            <h3 class="article__title"> <a href="" class="article__link">Lago di Braies – perła
                                     Dolomitów</a></h3>
                             <p class="article__excerpt">Lago Di Braies to perła Dolomitów. Turkusowa woda, drewniane
                                 łódki i poszarpane szczyty gór to jego wizytówka</p>
@@ -203,14 +209,14 @@
                     </div>
 
                     <div class="article__items">
-                        <ul class="post__meta">
-                            <li class="post__categories"><a href="" class="article__category__link">Polska</a></li>
-                            <li class="post__categories"><a href="" class="article__category__link">Europa</a></li>
-                            <li class="post__date">11/10/19</li>
+                        <ul class="article__meta  meta">
+                            <li class="meta__categories"><a href="" class="meta__link">Polska</a></li>
+                            <li class="meta__categories"><a href="" class="meta__link">Europa</a></li>
+                            <li class="meta__date">11/10/19</li>
                         </ul>
 
                         <div class="article__content">
-                            <h3 class="article__title"> <a href="" class="article__title__link">Punkty widokowe na
+                            <h3 class="article__title"> <a href="" class="article__link">Punkty widokowe na
                                     Tatry</a></h3>
                             <p class="article__excerpt"> 15 miejsc na Podchalu z pięknym widokiem na Tatry. Po górach
                                 można chodzic, ale można też podziwiać z daleka</p>
@@ -220,7 +226,9 @@
 
             </div>
             <div class="CTA cta__post">
-                <buttonn class="btn btn--solid">Zobacz wszystkie wpisy</buttonn>
+                <a href="blog.html">
+                    <buttonn class="btn btn--solid">Zobacz wszystkie wpisy</buttonn>
+                </a>
             </div>
 
         </div>
@@ -229,15 +237,15 @@
 
         <div class="cards pt--70 pb--100">
             <div class="container">
-                <div class="heading__center">
-                    <h2 class="heading__center__title">My Own Photo Story łączy podróże i fotografię</h2>
-                    <p class="heading__center__subtitle">
+                <div class="heading ">
+                    <h2 class="heading__title">My Own Photo Story łączy podróże i fotografię</h2>
+                    <p class="heading__subtitle">
                         My Own Photo Story łączy podróże i fotografię
                     </p>
                 </div>
-                <div class="row--2">
+                <div class="row--2 cards">
                     <div class="cards__content">
-                        <div class="imagebox imagebox__left">
+                        <div class="imagebox imagebox--left">
                         </div>
                         <div class="cards__layer">
                             <p class="cards__subtitle"> Relacje z podróży, przewodniki</p>
@@ -245,7 +253,7 @@
                         </div>
                     </div>
                     <div class="cards__content">
-                        <div class="imagebox imagebox__right">
+                        <div class="imagebox imagebox--right">
                         </div>
                         <div class="cards__layer">
                             <p class="cards__subtitle"> Nauka fotografii, poradniki, obróbka zdjęć</p>
@@ -264,8 +272,8 @@
                 <div class="row--2">
                     <div class="wrapper__column column">
 
-                        <div class="heading__left">
-                            <h2 class="heading__left__title">Zobacz moje autorskie presety do LR mobile. Wybierz je
+                        <div class="heading--left">
+                            <h2 class="heading__title">Zobacz moje autorskie presety do LR mobile. Wybierz je
                                 jeśli:
                             </h2>
                         </div>
@@ -288,8 +296,6 @@
                         <div class="btn btn--solid">Kup presety</div>
 
                     </div>
-
-
                     <div>
                         <div class="wrapper__image">
                             <img src="img/presety.png" alt="presety" class="image image--resize">
@@ -297,15 +303,13 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
 
         <!-- /////////// newsletter ////////////// -->
 
         <div class="container ">
-            <div class="inner__container">
-                <h2 class="inner__container__title">Zapisz się na newsletter</h2>
+            <div class="inner__container inner">
+                <h2 class="inner__title">Zapisz się na newsletter</h2>
 
                 <div class="webform">
                     <form action="">
@@ -328,15 +332,13 @@
 
         </div>
 
-
-
         <!-- /////////// custom blogpost photography ////////////// -->
 
         <div class="pt--70 pb--50">
             <div class="container ">
-                <div class="heading__center">
-                    <h2 class="heading__center__title">Wpisy fotograficzne</h2>
-                    <p class="heading__center__subtitle">
+                <div class="heading">
+                    <h2 class="heading__title">Wpisy fotograficzne</h2>
+                    <p class="heading__subtitle">
                         Chcesz robić lepsze zdjęcia? Zajrzyj do poradników i zainspiruj się
                     </p>
                 </div>
@@ -350,16 +352,16 @@
                         </div>
 
                         <div class="article__items">
-                            <ul class="post__meta">
-                                <li class="post__categories"><a href="" class="article__category__link">Fotografia</a>
+                            <ul class="post__meta meta">
+                                <li class="meta__categories"><a href="" class="meta__link">Fotografia</a>
                                 </li>
-                                <li class="post__categories"><a href="" class="article__category__link">Poradniki</a>
+                                <li class="meta__categories"><a href="" class="meta__link">Poradniki</a>
                                 </li>
-                                <li class="post__date">1/09/21</li>
+                                <li class="meta__date">1/09/21</li>
                             </ul>
 
                             <div class="article__content">
-                                <h3 class="article__title"> <a href="" class="article__title__link">Jak robić lepsze
+                                <h3 class="article__title"> <a href="" class="article__link">Jak robić lepsze
                                         zdjęcia – trójkąt ekspozycji</a></h3>
                                 <p class="article__excerpt">Co to jest ISO, przysłona, czas
                                     naświetlania, trójkąt ekspozycji, balans bieli? Zapraszam do krótkiego poradnika o
@@ -377,16 +379,16 @@
                         </div>
 
                         <div class="article__items">
-                            <ul class="post__meta">
-                                <li class="post__categories"><a href="" class="article__category__link">Fotografia</a>
+                            <ul class="post__meta meta">
+                                <li class="meta__categories"><a href="" class="meta__link">Fotografia</a>
                                 </li>
-                                <li class="post__categories"><a href="" class="article__category__link">Poradniki</a>
+                                <li class="meta__categories"><a href="" class="meta__link">Poradniki</a>
                                 </li>
-                                <li class="post__date">1/01/20</li>
+                                <li class="meta__date">1/01/20</li>
                             </ul>
 
                             <div class="article__content">
-                                <h3 class="article__title"> <a href="" class="article__title__link">Fotografowanie w
+                                <h3 class="article__title"> <a href="" class="article__link">Fotografowanie w
                                         podróży, jak robić lepsze zdjęcia?</a></h3>
                                 <p class="article__excerpt">Przeglądasz instagram i zachwycasz się zdjęciami innych
                                     osób?
@@ -405,16 +407,16 @@
                         </div>
 
                         <div class="article__items">
-                            <ul class="post__meta">
-                                <li class="post__categories"><a href="" class="article__category__link">Fotogarfia</a>
+                            <ul class="post__meta meta">
+                                <li class="meta__categories"><a href="" class="meta__link">Fotogarfia</a>
                                 </li>
-                                <li class="post__categories"><a href="" class="article__category__link">Poradniki</a>
+                                <li class="meta__categories"><a href="" class="meta__link">Poradniki</a>
                                 </li>
-                                <li class="post__date">11/12/20</li>
+                                <li class="meta__date">11/12/20</li>
                             </ul>
 
                             <div class="article__content">
-                                <h3 class="article__title"> <a href="" class="article__title__link">Kompozycja w
+                                <h3 class="article__title"> <a href="" class="article__link">Kompozycja w
                                         fotografii – 10 zasad, które musisz znać</a></h3>
                                 <p class="article__excerpt">Kompozycja - trójpodział i wizualny
                                     porządek
@@ -426,7 +428,7 @@
                     </article>
                 </div>
 
-                <div class="cta__button">
+                <div class="cta__box">
                     <buttonn class="btn btn--solid">Zobacz wszystkie wpisy</buttonn>
                 </div>
             </div>
@@ -439,8 +441,8 @@
             <div class="container">
                 <div class="row--3 row--2--1">
                     <div class="column column--2">
-                        <div class="heading__left">
-                            <h2 class="heading__left__title">Profesjonalne wydruki zdjęć
+                        <div class="heading--left">
+                            <h2 class="heading__title">Profesjonalne wydruki zdjęć
                             </h2>
                         </div>
                         <div>
@@ -461,12 +463,9 @@
                         <img src="img/prints1.jpg" alt="presety" class="image">
                     </div>
 
-
                     <div class="wrapper__image">
                         <img src="img/prints2.jpg" alt="presety" class="image">
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -483,7 +482,7 @@
             <div class="footer__block">
 
                 <div class="footer__items">
-                    <h4 class="footer__heading">Popularne wpisy</h4>
+                    <h4 class="footer__headline">Popularne wpisy</h4>
                     <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -491,42 +490,42 @@
                         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                     </svg>
                 </div>
-                <div class="footer_arrow" data-page="1">
-                    <span class="arrow arrow__left"></span>
-                    <span class="arrow arrow__right"></span>
+                <div class="footer__arrow" data-page="1">
+                    <span class="arrow arrow--left"></span>
+                    <span class="arrow arrow--right"></span>
                 </div>
             </div>
 
             <div class="row--4 footer__posts">
-                <div class="footer__post">
-                    <div class="footer__post__img"><img src="img/footerpost2.jpg" alt="" class="footer__img"></div>
+                <div class="footer__post ">
+                    <div class="footer__imgbox"><img src="img/footerpost2.jpg" alt="" class="footer__img"></div>
                     <div>
-                        <h4 class="footer__post__heading">Zwiedzanie Wenecji – plan na 3 dni</h4>
+                        <h4 class="footer__heading">Zwiedzanie Wenecji – plan na 3 dni</h4>
                     </div>
                 </div>
                 <div class="footer__post">
-                    <div class="footer__post__img"><img src="img/footerpost1.jpg" alt="" class="footer__img"></div>
+                    <div class="footer__imgbox"><img src="img/footerpost1.jpg" alt="" class="footer__img"></div>
                     <div>
-                        <h4 class="footer__post__heading">Kanion Antylopy- czy warto?</h4>
+                        <h4 class="footer__heading">Kanion Antylopy- czy warto?</h4>
                     </div>
                 </div>
                 <div class="footer__post">
 
-                    <div class="footer__post__img"><img src="/img/footerpost3.jpg" alt="" class="footer__img"></div>
+                    <div class="footer__imgbox"><img src="/img/footerpost3.jpg" alt="" class="footer__img"></div>
                     <div>
-                        <h4 class="footer__post__heading">Maskonury i czarne plaże Islandii </h4>
+                        <h4 class="footer__heading">Maskonury i czarne plaże Islandii </h4>
                     </div>
                 </div>
                 <div class="footer__post">
-                    <div class="footer__post__img"><img src="/img/footerpost4.jpg" alt="" class="footer__img"></div>
+                    <div class="footer__imgbox"><img src="/img/footerpost4.jpg" alt="" class="footer__img"></div>
                     <div>
-                        <h4 class="footer__post__heading">Kompozycja w fotografii - 10 zasad, które musisz znać</h4>
+                        <h4 class="footer__heading">Kompozycja w fotografii - 10 zasad, które musisz znać</h4>
                     </div>
                 </div>
             </div>
 
-            <div class="footer__copyright">
-                <div class="footer__copyrigt__text">
+            <div class="footer__copyright copyright">
+                <div class="copyrigt__text">
                     <span>Copyright © 2022 MyOwnPhotoStory.pl |</span>
                     <a href="">Polityka prywatności </a>|
                     <span>Wdrożenie</span> <a href="">WiolipCreates</a>
@@ -541,23 +540,15 @@
             </div>
         </div>
 
+
+        <div class="scroll__to-top" onclick="topFunction()" id="myBtn" title="Go to top">
+            <button class="scroll--btn">
+                <svg class="scroll--icon" width="18" height="15" viewBox="0 0 20 20">
+                    <path d="M10,0L9.4,0.6L0.8,9.1l1.2,1.2l7.1-7.1V20h1.7V3.3l7.1,7.1l1.2-1.2l-8.5-8.5L10,0z"></path>
+                </svg>
+            </button>
+        </div>
     </footer>
-
-    <!-- /////////// scroll to top ////////////// -->
-
-    <div class="scroll__to-top" onclick="topFunction()" id="myBtn" title="Go to top">
-        <button class="scroll--btn">
-            <svg class="scroll--icon" width="15" height="15" viewBox="0 0 20 20">
-                <path d="M10,0L9.4,0.6L0.8,9.1l1.2,1.2l7.1-7.1V20h1.7V3.3l7.1,7.1l1.2-1.2l-8.5-8.5L10,0z"></path>
-            </svg>
-        </button>
-    </div>
-
-
-
-
-
-
 
 
     <!-- /// mobile menu  -->

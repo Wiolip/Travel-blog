@@ -15,6 +15,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,8 +68,9 @@ li {
         font-size: $h1;
         font-weight: 700;
         color: $linkcolor;
+
         @include mq(s) {
-           font-size: 5.5rem;
+            font-size: 5.5rem;
         }
     }
 
@@ -79,28 +81,30 @@ li {
     }
 }
 
+// CTA button
+.cta {
+    &__post {
+        @extend .cta;
+        padding: 10rem 0;
+        background-image: url(../img/logotravel.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 60rem;
 
+        @include mq(s) {
+            background-size: contain;
+            background-position: top;
+            padding: 3rem 0;
 
-.cta__post {
-    @extend .cta;
-    padding: 10rem 0;
-    background-image: url(../img/logotravel.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 60rem;
-    @include mq(s) {
-        background-size: contain;
-        background-position: top;
-        padding: 3rem 0;
+        }
+    }
 
-     }
+    &__box{
+        text-align: center;
+        margin: 3rem 0;
+    }
 }
 
-
-
-.cta__button {
-    @extend .cta;
-}
 
 
 /////////// cards //////////////
@@ -109,8 +113,8 @@ li {
     background-color: $baseheading;
     position: relative;
 
-    .heading__center__title,
-    .heading__center__subtitle {
+    .heading__title,
+    .heading__subtitle {
         color: $linkcolor;
     }
 
@@ -149,22 +153,17 @@ li {
 
 }
 
-.image {
-    width: 100%;
-
-}
-
 .imagebox {
-   @extend .bg-image;
+    @extend .bg-image;
     min-height: 55rem;
     border-radius: 1.2rem;
 
-    &__left {
+    &--left {
         background-image: url(../img/home-myownphotostory1.jpeg);
         @extend .bg-image;
     }
 
-    &__right {
+    &--right {
         background-image: url(../img/home-myownphotostory2.jpeg);
         @extend .bg-image;
     }
@@ -178,17 +177,20 @@ li {
     &__item {
         line-height: $text-line-height;
 
+
         &::before {
             content: url('../img/check.svg');
             display: inline-block;
             width: 2rem;
             margin-right: 2rem;
+
         }
     }
 
     &--bg {
         background-color: $baseheading;
-        .heading__left__title {
+
+        .heading__title {
             color: $linkcolor;
         }
     }
@@ -197,69 +199,71 @@ li {
         color: $linkcolor;
     }
 
+    &__image {
+        min-height: 50rem;
+        border-radius: 1.2rem;
+        transition: .5s ease-in-out;
 
+        &:hover {
+            transform: translateY(-1rem);
+        }
 
-.image {
-    min-height: 50rem;
-    border-radius: 1.2rem;
-    transition: .5s ease-in-out;
+        @include mq(s) {
+            min-height: 30rem;
 
-    &:hover {
-        transform: translateY(-1rem);
+        }
+
     }
 
-    @include mq(s) {
-        min-height: 30rem;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
 
     }
 
-}
-
-
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem;
-
-}
-.column--2{
-    @include mq(ml) {
-        grid-column: 1/-1;
+    .column--2 {
+        @include mq(ml) {
+            grid-column: 1/-1;
+        }
     }
-}
 }
 
 ///////////newsletter form //////////////
 
-.inner__container {
-    background-image: $gradient, url(../img/newsletter.jpg);
-    @extend .bg-image;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50rem;
-    padding: 3rem 10rem;
-    border-radius: 1.2rem;
-    margin: 4rem 0;
+.inner {
+    &__container {
+        background-image: $gradient, url(../img/newsletter.jpg);
+        @extend .bg-image;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 50rem;
+        padding: 3rem 10rem;
+        border-radius: 1.2rem;
+        margin: 4rem 0;
+
+        @include mq(m) {
+            padding: 0 3rem;
+        }
+
+        @include mq(s) {
+            padding: 0 3rem;
+        }
+    }
 
     &__title {
         color: $linkcolor;
         margin: 1rem 0 3rem 0;
         text-align: center;
 
-    }
-    @include mq(m) {
-        padding: 0 3rem;
-    }
 
-    @include mq(s) {
-        padding: 0 3rem;
     }
-
 }
 
 .webform {
@@ -327,6 +331,7 @@ li {
 .checkbox {
     display: flex;
     gap: .5rem;
+
     &__content {
         font-size: 1.2rem;
         flex-basis: 97%;
@@ -352,13 +357,13 @@ li {
 
     }
 
-    &__heading,
+    &__headline,
     &__svg {
         color: $linkcolor;
         display: inline-block;
     }
 
-    &__post__heading {
+    &__heading {
         color: $linkcolor;
         font-weight: 400;
         font-size: 1.5rem;
@@ -385,7 +390,7 @@ li {
         border-radius: 50%;
     }
 
-    &__post__img {
+    &__imgbox {
         margin-right: 2rem;
     }
 
@@ -408,25 +413,23 @@ li {
 
     }
 
-    &__copyrigt__text {
-        color: $iconopacity;
+}
 
-        @include mq(m) {
-            text-align: center;
-            order: 2;
-        }
+.copyrigt__text {
+    color: $iconopacity;
+
+    @include mq(m) {
+        text-align: center;
+        order: 2;
     }
-
 }
 
 
-.footer_arrow {
+.footer__arrow {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-
-
 }
 
 .arrow {
@@ -461,13 +464,13 @@ li {
 
     }
 
-    &__left {
+    &--left {
         &::before {
             transform: rotate(-45deg);
         }
     }
 
-    &__right {
+    &--right {
         &::before {
             transform: rotate(135deg);
         }

@@ -32,42 +32,44 @@
 }
 
 
-//blogpost, prints, imageabout
+//blogpost, prints, image about
 .row--3 {
     @extend .row;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    @include mq(ml) {
-        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    @include mq(m) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     @include mq(s) {
-        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+
 }
 
 
-//related posts
+
+//about gallery
 .row--3--1 {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-
-    @include mq(ml) {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    @include mq(m) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    @include mq(s) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
 }
 
 
-//services
+//service cards
 .row--3--2 {
     @include mq(m) {
-        grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
-    }
-
-    @include mq(s) {
-        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
 }
+
 
 
 
@@ -75,12 +77,12 @@
 
 .row--2 {
     @extend .row;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    @include mq(s) {
-        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    @include mq(m) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+
 }
 
 
@@ -99,36 +101,20 @@
 
 }
 
-// archive main post
-.row--2--2 {
-    margin: 0 auto;
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
 
-}
-
-//footer post
+//footer post // service img
 
 .row--4 {
     @extend .row;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1rem;
-
-    @include mq(m) {
-        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-    }
-}
-
-///imge gallery services
-
-.row--4--2 {
-    @extend .row;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
+
 
     @include mq(m) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include mq(s) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
@@ -137,15 +123,13 @@
 //services gallery
 .row--7 {
     @extend .row;
-    max-width: 100rem;
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 1rem;
 
     @include mq(s) {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-}
 
+}
 
 h1,
 h2,
@@ -173,6 +157,10 @@ h4 {
     font-size: $h4;
 }
 
+.image {
+    width: 100%;
+
+}
 
 // logo
 %logo {
@@ -188,10 +176,22 @@ h4 {
 
 // heading
 
-.heading__center {
-    padding: 5rem 0;
-    margin-bottom: 3rem;
+.heading {
+    margin-top: 5rem;
+    padding-bottom: 7rem;
     text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        border-top: 1rem solid $primary;
+        width: 10rem;
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
 
     @include mq(s) {
         padding: 0;
@@ -202,32 +202,17 @@ h4 {
         font-weight: 600;
         margin-bottom: 2rem;
         color: $baseheading;
-        position: relative;
-
-        &::before {
-            content: "";
-            display: inline-block;
-            border-top: 1rem solid $primary;
-            width: 10rem;
-            position: absolute;
-            top: -2rem;
-            left: 50%;
-            transform: translate(-50%, 50%);
-        }
     }
 
     &__subtitle {
         font-size: $basetext;
     }
-}
 
-
-.heading__left {
-    position: relative;
-
-    &__title {
-
-        margin-bottom: 3rem;
+    &--left {
+        position: relative;
+        margin-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: left;
 
         &::before {
             content: "";
@@ -235,11 +220,19 @@ h4 {
             border-top: 1rem solid $primary;
             width: 10rem;
             position: absolute;
-            top: -2rem;
-
+            top: -3rem;
+            left: 5rem;
+            transform: translate(-50%, 50%);
         }
     }
+
+
+
+
 }
+
+
+
 
 
 
@@ -296,6 +289,8 @@ h4 {
             border: solid .1rem $baseheading;
         }
     }
+
+
 }
 
 

@@ -2,6 +2,8 @@
 
 # Dependency directories
 node_modules
+package-lock.json
+package.json
 
 # Mac files
 .DS_Store
@@ -9,6 +11,7 @@ css/.DS_Store
 img/.DS_Store
 js/.DS_Store
 scss/.DS_Store
+
 
 
 

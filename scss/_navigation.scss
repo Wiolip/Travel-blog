@@ -2,74 +2,77 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 7rem;
-    padding: 2rem 5rem;
     background-color: $bgcolor;
     z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s ease-in-out;
 
-    &__list {
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+    }
+
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__items {
         display: flex;
         flex: 2;
         justify-content: flex-start;
         align-items: center;
         gap: 0 2rem;
+    }
 
-        &logo {
-            width: 5rem;
-            height: 5rem;
+    &__item {
+        position: relative;
+        font-weight: 600;
+        font-size: 1.4rem;
+        padding: 2rem;
+
+        &::after {
+            content: "";
+            width: 0;
+            height: .5rem;
+            background: $primary;
+            display: block;
+            margin: auto;
+            margin-top: .5rem;
+            transition: 0.5s;
         }
 
-        &__item {
-            position: relative;
-            font-weight: 600;
-            font-size: 1.4rem;
-            padding: 1.5rem .5rem;
-
-            &::after {
-                content: "";
-                width: 0;
-                height: .5rem;
-                background: $primary;
-                display: block;
-                margin: auto;
-                margin-top: .5rem;
-                transition: 0.5s;
-            }
-
-            &:hover::after {
-                width: 100%;
-            }
-
-            &:hover .submenu {
-                display: block;
-            }
+        &:hover::after {
+            width: 100%;
         }
 
-        &__link {
-            color: $baseheading;
-            text-transform: uppercase;
+        &:hover .dropdown {
+            display: block;
+        }
+    }
 
-            &:hover {
-                color: $primary;
-            }
+    &__link {
+        color: $baseheading;
+        text-transform: uppercase;
 
+        &:hover {
+            color: $primary;
         }
 
-        &__link--solid {
-            color: $baseheading;
-
-            &:active {
-                color: $primary;
-            }
+        &--active {
+            color: $primary;
         }
-
-
 
     }
+
+    &__link--solid {
+        color: $baseheading;
+
+        &:active {
+            color: $primary;
+        }
+    }
+
 
     .fas,
     .menu-btn {
@@ -79,13 +82,13 @@
 }
 
 // mobile class show
-.navbar.show .nav__list {
+.navbar.show .nav__items {
     right: 0;
 }
 
 
-.has-submenu>.nav__list__link::after,
-.has-submenu>.submenu__links::after {
+.menu__dropdown>.nav__link::after,
+.menu__dropdown--children>.dropdown__link::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";
     font-size: 1.2rem;
@@ -96,34 +99,39 @@
 
 }
 
-.submenu,
-.submenu--2 {
+.menu__dropdown,
+.menu__dropdown--children {
+    position: relative;
+}
+
+.dropdown {
     position: absolute;
-    top: 5.5rem;
-    left: -1rem;
+    top: 100%;
+    left: 0;
     background-color: $linkcolor;
     width: 20rem;
     padding: 1rem 0 1rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     transition: opacity 200ms ease-in-out;
     display: none;
 
+}
 
+.dropdown {
     &__item {
         display: block;
-        padding: .5rem;
+        padding: 1rem;
         position: relative;
 
-        &:hover .submenu--2 {
+        &:hover .submenu {
             display: block;
         }
+
+
     }
 
-
-
-    &__links {
+    &__link {
         display: block;
         padding: .5rem 0;
         color: $baseheading;
@@ -138,29 +146,45 @@
 
 }
 
-.submenu--2 {
+.submenu {
     position: absolute;
-    top: 1rem;
-    left: 19rem;
+    top: 0;
+    left: 100%;
+    background-color: $linkcolor;
+    width: 20rem;
+    padding: 1rem 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 200ms ease-in-out;
+    display: none;
 
     &__item {
-        padding: .5rem;
+        padding: 1rem;
+    }
+
+    &__link {
+        display: block;
+        padding: .5rem 0;
+        color: $baseheading;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $secondary;
+        }
+
     }
 
 }
 
-
-
-
-///// sticky menu
+/// sticky menu
 
 
 nav.sticky {
-    padding: .5rem 5rem;
     background: $bgcolor;
     border-bottom: .1rem solid $primary;
 
-    .nav__link {
+    .nav__item {
         color: $baseheading;
         display: block;
     }
@@ -174,22 +198,7 @@ nav.sticky {
             color: $linkcolor;
         }
     }
-
-    .nav__list__link {
-        color: $baseheading;
-    }
-
-
-    .has-submenu>.nav__list__link::after,
-    .has-submenu>.submenu__links::after {
-        content: "\f078";
-        color: $baseheading;
-
-
-    }
-
 }
-
 
 
 .socials {
@@ -225,6 +234,7 @@ nav.sticky {
 
     }
 
+
     &--solid {
         justify-content: flex-start;
         margin-top: 3rem;
@@ -232,6 +242,7 @@ nav.sticky {
 
     &--solid .fab {
         background-color: $baseheading;
+        color: $bgcolor;
         border: 0;
 
         &:hover {
@@ -239,6 +250,7 @@ nav.sticky {
             border: 0;
         }
     }
+
 
     &--footer .fab {
         color: $bgcolor;
@@ -253,13 +265,6 @@ nav.sticky {
 
 }
 
-
-
-
-
-
-
-
 @media screen and (max-width: 880px) {
 
     .body {
@@ -267,16 +272,17 @@ nav.sticky {
     }
 
     .nav {
-        height: 5rem;
+        &-container {
+            height: 5rem;
+        }
 
-        &__list {
+        &__items {
             position: fixed;
             height: 100vh;
-            width: 50%;
+            width: 80%;
             top: 0;
             right: -100%;
-            padding: 3rem;
-            display: block;
+            padding: 3rem 0 0 2rem;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -284,28 +290,28 @@ nav.sticky {
             z-index: 2;
             transition: 1s ease-in-out;
 
-            &__item {
-                display: block;
+        }
 
-                &::after {
-                    display: none;
-                }
+        &__item {
+            display: block;
+
+            &::after {
+                display: none;
             }
+        }
 
-            &__link {
-                font-size: 1.6rem;
-                color: $linkcolor;
+        &__link {
+            font-size: 1.6rem;
+            color: $linkcolor;
 
-                &:hover {
-                    color: $linkcolor2;
-                }
+            &:hover {
+                color: $linkcolor2;
             }
+        }
 
-            &logo {
-                width: 3rem;
-                height: 3rem;
-            }
-
+        &__logo {
+            width: 3rem;
+            height: 3rem;
         }
 
         .fas {
@@ -319,7 +325,7 @@ nav.sticky {
             background-color: $linkcolor;
             border: .1rem solid $primary;
             border-radius: .4rem;
-            padding: .5rem;
+            padding: .5rem 1rem;
             cursor: pointer;
 
         }
@@ -329,8 +335,8 @@ nav.sticky {
         }
     }
 
-    .has-submenu>.nav__list__link::after,
-    .has-submenu>.submenu__links::after {
+    .menu__dropdown>.nav__link::after,
+    .menu__dropdown--children>.dropdown__link::after {
         content: "\f078";
         color: $secondary;
     }
@@ -349,39 +355,34 @@ nav.sticky {
         }
     }
 
-.footer__copyrigt__text{
-    order:2;
-}
+    .footer__copyrigt__text {
+        order: 2;
+    }
 
     nav.sticky {
-
-        .nav__listlogo {
+        .nav__logo {
             width: 3rem;
             height: 3rem;
         }
 
-        .nav__list__link {
+        .nav__link {
             color: $linkcolor;
 
             &:hover {
                 color: $secondary;
             }
 
-
         }
 
-        li a {
-            color: $linkcolor2;
-        }
 
-        .has-submenu>.nav__list__link::after,
-        .has-submenu>.submenu__links::after {
+        .menu__dropdown>.nav__link::after,
+        .menu__dropdown--children>.dropdown__link::after {
             content: "\f078";
-            color: $secondary;
+            color: $linkcolor;
         }
     }
 
-    .submenu {
+    .dropdown {
         // display: none;
         position: relative;
         top: 2rem;
@@ -390,7 +391,7 @@ nav.sticky {
 
     }
 
-    .submenu--2 {
+    .submenu {
         position: absolute;
         top: 1rem;
         left: 14rem;
@@ -402,8 +403,6 @@ nav.sticky {
 
     }
 
-
-
     // .submenu-active .submenu {
     //     display: block;
     // }
@@ -412,7 +411,7 @@ nav.sticky {
 
 @media screen and (max-width: 570px) {
     .nav {
-        &__list {
+        &__item {
             width: 100%;
         }
     }
