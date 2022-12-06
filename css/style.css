@@ -652,14 +652,14 @@ nav.sticky .menu__dropdown--children > .dropdown__link::after {
   background-color: #ef7059;
   vertical-align: middle;
 }
-
-.image__container {
-  display: inline-flex;
-  position: relative;
-  overflow: hidden;
+.meta__commentsmeta {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
 }
-
-.post_date--2::after {
+.meta__date--2::after {
   content: "";
   display: inline-block;
   width: 0.5rem;
@@ -670,12 +670,10 @@ nav.sticky .menu__dropdown--children > .dropdown__link::after {
   vertical-align: middle;
 }
 
-.post__commentsmeta {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  margin-left: 1rem;
+.image__container {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .blog__hero {
@@ -1097,58 +1095,56 @@ input[type=checkbox]:checked::after {
   background-color: #cecece;
 }
 
-.blogpost__navigation {
+.navigation {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
 }
-.blogpost__navigation__item-prev, .blogpost__navigation__item-next {
+.navigation-prev, .navigation-next {
   display: flex;
   flex-basis: 49%;
 }
-.blogpost__navigation__item-next {
+.navigation-next {
   justify-content: flex-end;
   text-align: right;
 }
-.blogpost__navigation__content {
+.navigation__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0.5rem;
 }
-.blogpost__navigation__label {
+.navigation__label {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #ca4c25;
 }
 @media (max-width: 560px) {
-  .blogpost__navigation__label {
+  .navigation__label {
     font-size: 1.2rem;
   }
 }
-.blogpost__navigation__label--left {
+.navigation__label-left {
   align-self: flex-end;
 }
-.blogpost__navigation__title {
+.navigation__title {
   color: #464646;
 }
-.blogpost__navigation__title:hover {
+.navigation__title:hover {
   color: #ef7059;
 }
 @media (max-width: 560px) {
-  .blogpost__navigation__title {
+  .navigation__title {
     display: none;
   }
 }
-
-.navigation__img__container {
+.navigation__container {
   position: relative;
   align-items: center;
   justify-content: center;
 }
-
 .navigation__img {
   width: 7rem;
   height: 7rem;

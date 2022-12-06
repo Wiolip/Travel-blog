@@ -79,6 +79,27 @@
             vertical-align: middle;
         }
     }
+
+    &__commentsmeta {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        margin-left: 1rem;
+    }
+
+    &__date--2 {
+        &::after {
+            content: "";
+            display: inline-block;
+            width: .5rem;
+            height: .5rem;
+            margin-left: .8rem;
+            border-radius: 50%;
+            background-color: $secondary;
+            vertical-align: middle;
+        }
+    }
 }
 
 .image__container {
@@ -91,27 +112,7 @@
 
 
 
-.post_date--2 {
-    &::after {
-        content: "";
-        display: inline-block;
-        width: .5rem;
-        height: .5rem;
-        margin-left: .8rem;
-        border-radius: 50%;
-        background-color: $secondary;
-        vertical-align: middle;
-    }
-}
 
-
-.post__commentsmeta {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.4rem;
-    margin-bottom: .5rem;
-    margin-left: 1rem;
-}
 
 
 
@@ -603,20 +604,20 @@ input[type=checkbox] {
 }
 
 
-.blogpost__navigation {
+.navigation {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     overflow: hidden;
 
 
-    &__item-prev,
-    &__item-next {
+    &-prev,
+    &-next {
         display: flex;
         flex-basis: 49%;
     }
 
-    &__item-next {
+    &-next {
         justify-content: flex-end;
         text-align: right;
     }
@@ -639,7 +640,7 @@ input[type=checkbox] {
             font-size: 1.2rem;
         }
 
-        &--left {
+        &-left {
             align-self: flex-end;
         }
     }
@@ -655,27 +656,29 @@ input[type=checkbox] {
             display: none;
         }
     }
-}
 
+    &__container {
+        position: relative;
+        align-items: center;
+        justify-content: center;
 
+    }
 
-.navigation__img__container {
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    &__img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
 
-}
-
-.navigation__img {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-
-    @include mq(s) {
-        width: 4rem;
-        height: 4rem;
+        @include mq(s) {
+            width: 4rem;
+            height: 4rem;
+        }
     }
 }
+
+
+
+
 
 .blogpost__form {
     color: $basetext;
